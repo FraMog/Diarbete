@@ -53,7 +53,7 @@
 
 
 
-	<footer><%@include file="jspIncluse/header.jsp" %></footer>
+	<footer><%@include file="jspIncluse/footer.jsp" %></footer>
 
 
 </body>
