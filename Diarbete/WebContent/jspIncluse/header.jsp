@@ -1,4 +1,4 @@
-<!-- L'header contiene il logo, il form di ricerca, e l'icona del login -->
+<!-- L'header contiene il logo, il form di ricerca delle farmacie, e l'icona del login -->
 <div id="logoContainer">
 			<img src="img/logo.png">
 		</div>
@@ -11,8 +11,6 @@
 
 
 		<!-- Cerca farmacia -->
-
-
 		<div class="container">
 			<div class="row">
 
@@ -20,7 +18,7 @@
 					<div id="custom-search-input">
 						<div class="input-group col-md-12 in-sm" style="height: 10px;">
 							<input type="text" class="form-control input-sm"
-								placeholder="Buscar" /> <span class="input-group-btn">
+								placeholder="Cerca farmacia" /> <span class="input-group-btn">
 								<button class="btn btn-info btn-lg" type="button">
 									<i class="glyphicon glyphicon-search"></i>
 								</button>
