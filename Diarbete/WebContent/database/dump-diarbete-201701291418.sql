@@ -175,6 +175,7 @@ CREATE TABLE `postforum` (
   `titolo` varchar(100) NOT NULL,
   `dataInserimento` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `autorePost` varchar(100) NOT NULL,
+  `argomento` varchar(100) NOT NULL,
   PRIMARY KEY (`titolo`,`dataInserimento`),
   KEY `postforum_paziente_fk` (`autorePost`),
   CONSTRAINT `postforum_paziente_fk` FOREIGN KEY (`autorePost`) REFERENCES `paziente` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -252,4 +253,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-27 17:25:35
+-- Dump completed on 2017-01-29 14:18:57
