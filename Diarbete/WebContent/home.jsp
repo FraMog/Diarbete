@@ -11,7 +11,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
-
+<title>Home Page</title>
 
 </head>
 
@@ -21,26 +21,8 @@
 		<%@include file="jspIncluse/header.jsp" %>
 	</header>
 
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-		</div>
-
-		<div class="collapse navbar-collapse  navbar-ex1-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Consigli</a></li>
-				<li><a href="#">Eventi</a></li>
-				<li><a href="#">Forum</a></li>
-				<li><a href="#">Contatti</a></li>
-			</ul>
-		</div>
-	</nav>
+    <%@include file="jspIncluse/menuNavigazionale.jsp"%>
+	
 
 
 
@@ -62,6 +44,7 @@
     <div class="card-block">
       <h4 class="card-title center-block">Titolo ultimo evento</h4>
       <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
+      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
