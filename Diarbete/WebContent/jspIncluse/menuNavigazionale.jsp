@@ -6,6 +6,7 @@
 		$('#myItemMenuNavigazionale').addClass("active");
 	})
  </script>
+ dove myItemMenuNavigazionale è uno degli item presenti in lista
  --%>
 
 <nav class="navbar navbar-default" role="navigation">
