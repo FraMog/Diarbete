@@ -46,6 +46,7 @@
         <th>
           <h3>Titolo topic</h3>
         </th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Argomento</th>
         <th class="cell-stat text-center hidden-xs hidden-sm">Risposte</th>
         <th class="cell-stat-2x hidden-xs hidden-sm">Ultima risposta</th>
       </tr>
@@ -55,7 +56,8 @@
         <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
         <td>
           <h4><a href="#">Frequently Asked Questions</a><br><small>Some description</small></h4>
-        </td>    
+        </td>
+        <td class="text-center hidden-xs hidden-sm">Diabete tipo A</td>  
         <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
         <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br><small><i class="fa fa-clock-o"></i> 3 months ago</small></td>
       </tr>
@@ -64,6 +66,7 @@
         <td>
           <h4><a href="#">Important changes</a><br><small>Category description</small></h4>
         </td>
+        <td class="text-center hidden-xs hidden-sm">Diabete Tipo B</td>
         <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
         <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 1 years ago</small></td>
       </tr>
