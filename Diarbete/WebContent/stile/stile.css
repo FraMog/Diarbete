@@ -5,6 +5,11 @@ body {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+textarea {
+    resize: none;
+}
+
 .card-title, .card-footer {
 	text-align: center;
 }
