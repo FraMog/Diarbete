@@ -72,7 +72,7 @@ CREATE TABLE if not exists diarbete.`messaggioforum` (
   `body` varchar(256) NOT NULL,
   `autoreRispostaDottore` varchar(100) DEFAULT NULL,
   `autoreRispostaPaziente` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`titoloPost`,`dataPubblicazionePost`),
+  PRIMARY KEY (`titoloPost`,`dataPubblicazionePost`, `dataInserimentoRisposta`),
   KEY `messaggioforum_dottore_fk` (`autoreRispostaDottore`),
   KEY `messaggioforum_paziente_fk` (`autoreRispostaPaziente`),
   FOREIGN KEY (`autoreRispostaDottore`) REFERENCES `dottore` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
