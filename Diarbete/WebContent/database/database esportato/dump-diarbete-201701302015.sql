@@ -116,12 +116,12 @@ CREATE TABLE `messaggioforum` (
   `body` varchar(256) NOT NULL,
   `autoreRispostaDottore` varchar(100) DEFAULT NULL,
   `autoreRispostaPaziente` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`titoloPost`,`dataPubblicazionePost`),
+  PRIMARY KEY (`titoloPost`,`dataPubblicazionePost`,`dataInserimentoRisposta`),
   KEY `messaggioforum_dottore_fk` (`autoreRispostaDottore`),
   KEY `messaggioforum_paziente_fk` (`autoreRispostaPaziente`),
-  CONSTRAINT `messaggioforum_dottore_fk` FOREIGN KEY (`autoreRispostaDottore`) REFERENCES `dottore` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `messaggioforum_paziente_fk` FOREIGN KEY (`autoreRispostaPaziente`) REFERENCES `paziente` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `messaggioforum_postforum_fk` FOREIGN KEY (`titoloPost`, `dataPubblicazionePost`) REFERENCES `postforum` (`titolo`, `dataInserimento`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `messaggioforum_ibfk_1` FOREIGN KEY (`autoreRispostaDottore`) REFERENCES `dottore` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `messaggioforum_ibfk_2` FOREIGN KEY (`autoreRispostaPaziente`) REFERENCES `paziente` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `messaggioforum_ibfk_3` FOREIGN KEY (`titoloPost`, `dataPubblicazionePost`) REFERENCES `postforum` (`titolo`, `dataInserimento`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -253,4 +253,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-29 14:18:57
+-- Dump completed on 2017-01-30 20:15:16

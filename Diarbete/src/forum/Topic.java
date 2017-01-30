@@ -2,6 +2,8 @@ package forum;
 
 import java.sql.Timestamp;
 
+import eccezioni.ParametroIllegaleException;
+
 public class Topic {
 
 	public Topic() {
@@ -11,8 +13,12 @@ public class Topic {
 	
 	
 	
-	public Topic(String titolo, String autorePost, String argomento, Timestamp dataInserimento) {
+	public Topic(String titolo, String autorePost, String argomento, Timestamp dataInserimento) throws ParametroIllegaleException {
 		super();
+		if(titolo==null  || titolo.length()==0) throw new ParametroIllegaleException("Il titolo non può essere vuoto!");
+		if(autorePost==null  || autorePost.length()==0) throw new ParametroIllegaleException("L'autore del post non può essere vuoto!");
+		if(argomento==null  || argomento.length()==0) throw new ParametroIllegaleException("L'argomento del post non può essere vuoto!");
+		if(dataInserimento==null ) throw new ParametroIllegaleException("La data di inserimento del post non può essere vuota!");
 		this.titolo = titolo;
 		this.autorePost = autorePost;
 		this.argomento = argomento;

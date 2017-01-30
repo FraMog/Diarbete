@@ -2,6 +2,8 @@ package forum;
 
 import java.sql.Timestamp;
 
+import eccezioni.ParametroIllegaleException;
+
 public class Risposta {
 
 	public Risposta() {
@@ -9,11 +11,16 @@ public class Risposta {
 
 	
 	
-	public Risposta(String body, String autoreRisposta, Timestamp dataInserimento) {
+	public Risposta(String body, String autoreRisposta, Timestamp dataInserimento, Topic topicDiRiferimento,  String tipologiaUtenteCheHaRisposto) throws ParametroIllegaleException {
 		super();
+		if(body==null  || body.length()==0) throw new ParametroIllegaleException("Il corpo del messaggio non può essere vuoto!");
+		if(autoreRisposta==null  || autoreRisposta.length()==0) throw new ParametroIllegaleException("L'autore della risposta non può essere vuoto!");
+		if(dataInserimento==null ) throw new ParametroIllegaleException("La data di inserimento del post non può essere vuota!");
 		this.body = body;
 		this.autoreRisposta = autoreRisposta;
 		this.dataInserimento = dataInserimento;
+		this.topicDiRiferimento=topicDiRiferimento;
+		this.tipologiaUtenteCheHaRisposto=tipologiaUtenteCheHaRisposto;
 	}
 
 	
@@ -56,9 +63,41 @@ public class Risposta {
 
 
 
+	public Topic getTopicDiRiferimento() {
+		return topicDiRiferimento;
+	}
 
 
-	private String body, autoreRisposta;
+
+	public void setTopicDiRiferimento(Topic topicDiRiferimento) {
+		this.topicDiRiferimento = topicDiRiferimento;
+	}
+
+
+
+	
+
+
+
+	public String getTipologiaUtenteCheHaRisposto() {
+		return tipologiaUtenteCheHaRisposto;
+	}
+
+
+
+	public void setTipologiaUtenteCheHaRisposto(String tipologiaUtenteCheHaRisposto) {
+		this.tipologiaUtenteCheHaRisposto = tipologiaUtenteCheHaRisposto;
+	}
+
+
+
+
+
+
+
+	private String body, autoreRisposta, tipologiaUtenteCheHaRisposto;
 	private Timestamp dataInserimento;
+	private Topic topicDiRiferimento;
+
 	
 }
