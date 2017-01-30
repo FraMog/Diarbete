@@ -1,6 +1,7 @@
 package forum;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 import eccezioni.ParametroIllegaleException;
 
@@ -23,9 +24,18 @@ public class Topic {
 		this.autorePost = autorePost;
 		this.argomento = argomento;
 		this.dataInserimento = dataInserimento;
+		risposteAlTopic= new ArrayList<Risposta>();
 	}
 
 	
+	public Topic(String titolo) throws ParametroIllegaleException {
+		super();
+		if(titolo==null  || titolo.length()==0) throw new ParametroIllegaleException("Il titolo non può essere vuoto!");
+		this.titolo = titolo;
+		this.autorePost = "";
+		this.argomento = "";
+		this.dataInserimento = new Timestamp(System.currentTimeMillis());
+	}
 	
 
 
@@ -84,8 +94,23 @@ public class Topic {
 	}
 
 
+	public ArrayList<Risposta> getRisposteAlTopic() {
+		return risposteAlTopic;
+	}
+
+
+
+
+	public void setRisposteAlTopic(ArrayList<Risposta> risposteAlTopic) {
+		this.risposteAlTopic = risposteAlTopic;
+	}
+
+
+
+
 
 
 	private String titolo, autorePost, argomento;
 	private Timestamp dataInserimento;
+	private ArrayList <Risposta> risposteAlTopic;
 }
