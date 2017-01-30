@@ -38,7 +38,32 @@
     <div class="clearfix"></div>
   </div>
   <p class="lead">Nel <b>forum</b> potrai aprire nuovi topics per permettere ad altri di chiarire i tuoi dubbi.</p>
-  <p>Controlla prima, cercando nell'apposito form di ricerca, se qualche altro utente ha gia avuto il tuo stesso problema ricevendo una risposta soddisfacente, per evitare inutili duplicati.</p>
+  <p>Controlla prima, cercando nella sottostante casella di ricerca, se qualche altro utente ha gia avuto il tuo stesso problema ricevendo una risposta soddisfacente, per evitare inutili duplicati.</p>
+ 
+
+
+
+<fieldset class="scheduler-border">
+ <legend class="scheduler-border">Form di ricerca</legend>
+ <div class="container">
+    <h3 class ="col-xs-12 col-sm-3 col-sm-offset-6">Cerca per titolo topic</h3>
+ 	<div class="col-xs-12 col-sm-3" style="padding-top:20px;">
+					<div id="custom-search-input">
+						<div class="input-group col-xs-12" style="height: 10px;">
+							<input type="text" class="form-control input-xs-12"
+								placeholder="Inserisci titolo topic" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+ </div>
+</fieldset>
+
+
+ <h2 style="text-align:center;">Elenco Topic presenti nel forum</h2>
   <table class="table forum table-striped">
     <thead>
       <tr>
