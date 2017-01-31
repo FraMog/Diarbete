@@ -22,14 +22,21 @@ public class VisualizzaPostForum extends HttpServlet {
 		try {
 			Topic topicDaMostrare = new Topic(req.getParameter("titolo"), Timestamp.valueOf(req.getParameter("dataPubblicazioneTopic")));
 		    ArrayList<Risposta> elencoRisposteAlTopic = new RispostaDAO().ottieniRisposteAlTopic(topicDaMostrare);
+		    req.setAttribute("elencoRisposteAlTopic", elencoRisposteAlTopic);
+		    req.setAttribute("topicDaMostrare", topicDaMostrare);
+		    req.getRequestDispatcher("mostraTopic.jsp").forward(req, resp);
+		    return;
 		} catch (ParametroIllegaleException e) {
 			e.printStackTrace();
+			  req.setAttribute("elencoRisposteAlTopic", null);
+			  req.setAttribute("topicDaMostrare", null);
+			  req.getRequestDispatcher("mostraTopic.jsp").forward(req, resp);
+			  return;
 		}
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}
 
