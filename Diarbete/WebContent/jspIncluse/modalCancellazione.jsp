@@ -1,4 +1,4 @@
-<%-- Un modal per la cancellazione riusabile--%>
+<%-- Un modal riusabile per la cancellazione --%>
 
 <div class="modal fade" id="modalCancellazione" role="dialog">
   <div class="modal-dialog">

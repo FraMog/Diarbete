@@ -13,6 +13,7 @@
       <small class="text-muted">Risposto il <%= new java.text.SimpleDateFormat("dd-MM-yyyy").format(ultimaRisposta.getDataInserimento())%> alle <%= new java.text.SimpleDateFormat("HH:mm:ss").format(ultimaRisposta.getDataInserimento()).substring(0,8)%> da <b><%=ultimaRisposta.getAutoreRisposta()%></b></small>
     </div>
 <%} else {%>
+<img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
  <div class="card-block">
       <h4 class="card-title center-block"></h4>
       <p class="card-text">Non c'è nessun post nel forum attualmente.</p>

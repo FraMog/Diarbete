@@ -124,6 +124,7 @@
 
 
 <%@include file="jspIncluse/modalCancellazione.jsp" %>
+<%@include file="jspIncluse/modalFineOperazione.jsp" %>
 
 
 </body>

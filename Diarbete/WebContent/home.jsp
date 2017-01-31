@@ -61,7 +61,7 @@
 <%--Carico al momento del caricamento della pagina l'ultimo post risposto nel forum --%>
 <script>
 $(document).ready(function(){
-	$.ajax({type:"GET",
+	$.ajax({type:"POST",
 		url: "MostraUltimoTopicRisposto",
 		success: function(risposta){ //se la richiesta ha successo
 			$('#ultimaRispostaPost').html(risposta);
