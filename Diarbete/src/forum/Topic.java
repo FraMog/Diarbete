@@ -28,13 +28,13 @@ public class Topic {
 	}
 
 	
-	public Topic(String titolo) throws ParametroIllegaleException {
+	public Topic(String titolo, Timestamp dataInserimento) throws ParametroIllegaleException {
 		super();
 		if(titolo==null  || titolo.length()==0) throw new ParametroIllegaleException("Il titolo non può essere vuoto!");
 		this.titolo = titolo;
 		this.autorePost = "";
 		this.argomento = "";
-		this.dataInserimento = new Timestamp(System.currentTimeMillis());
+		this.dataInserimento = dataInserimento;
 	}
 	
 

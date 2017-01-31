@@ -64,18 +64,19 @@ public class TopicDAO {
 		try{
 		conn = DBManager.getInstance().getConnection();
 		
-				String query = "SELECT DISTINCT postforum.titolo, messaggioforum.body, messaggioforum.dataInserimentoRisposta, messaggioforum.autoreRispostaPaziente, messaggioforum.autoreRispostaDottore FROM postforum inner join messaggioforum " +
+				String query = "SELECT DISTINCT postforum.titolo, messaggioforum.body, messaggioforum.dataInserimentoRisposta, messaggioforum.autoreRispostaPaziente, messaggioforum.autoreRispostaDottore, postforum.dataInserimento FROM postforum inner join messaggioforum " +
 				"ON (messaggioforum.titoloPost = postforum.titolo AND messaggioforum.dataPubblicazionePost = postforum.dataInserimento) WHERE messaggioforum.dataInserimentoRisposta IN (" +
 						                                                                                                                                                   "SELECT DISTINCT dataInserimentoRisposta FROM messaggioforum"
-				                                                                                                                                                          + " WHERE dataInserimentoRisposta>=ALL("
-				                                                                                                                                                          +                                  "SELECT DISTINCT dataInserimentoRisposta FROM messaggioforum))";
+				                                                                                                                                                         + " WHERE dataInserimentoRisposta=("
+				                                                                                                                                                                                           +"SELECT MAX(dataInserimentoRisposta) FROM messaggioforum))";
+				 System.out.println(query);
 				s = conn.createStatement(); 
 				ResultSet resultSet= s.executeQuery(query);
 				if(!resultSet.next()){
 					return null;
 				}
 				
-				Topic ultimoTopicRisposto= new Topic(resultSet.getString(1));
+				Topic ultimoTopicRisposto= new Topic(resultSet.getString(1),resultSet.getTimestamp(6));
 				Risposta ultimaRisposta;
 				if(resultSet.getString(4)!=null)//se la risposta è stata fatta da un paziente
 				     ultimaRisposta= new Risposta(resultSet.getString(2), resultSet.getString(4), resultSet.getTimestamp(3),ultimoTopicRisposto, TipologieUtenti.PAZIENTE);

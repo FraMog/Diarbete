@@ -16,23 +16,19 @@ public class MostraUltimoTopicRisposto extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		 try {
-			Topic ultimoTopicRisposto= new TopicDAO().mostraUltimoTopicRisposto();
-		} catch (ParametroIllegaleException e) {
-			e.printStackTrace();
-			resp.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
-			return;
-			
-		}
+	     doPost(req,resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			Topic ultimoTopicRisposto= new TopicDAO().mostraUltimoTopicRisposto();
+			req.setAttribute("ultimoTopicRisposto", ultimoTopicRisposto);
+			req.getRequestDispatcher("ultimaRispostaForumHomePage.jsp").forward(req,resp);
+			return;
 		} catch (ParametroIllegaleException e) {
-			e.printStackTrace();
-			resp.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+			req.setAttribute("ultimoTopicRisposto", null);
+			req.getRequestDispatcher("ultimaRispostaForumHomePage.jsp").forward(req,resp);
 			return;
 		}
 	}

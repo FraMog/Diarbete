@@ -51,26 +51,34 @@
       <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
     </div>
   </div>
-  <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultima discussione</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
+  <div class="card col-xs-12 col-sm-4" id="ultimaRispostaPost">
+
   </div>
 </div>
 
 </section>
 
+<%--Carico al momento del caricamento della pagina l'ultimo post risposto nel forum --%>
+<script>
+$(document).ready(function(){
+	$.ajax({type:"GET",
+		url: "MostraUltimoTopicRisposto",
+		success: function(risposta){ //se la richiesta ha successo
+			$('#ultimaRispostaPost').html(risposta);
+		},
+		error: function (response) { //se la richiesta fallisce
+			$('#ultimaRispostaPost').html(risposta);
+	    }
+	});
+});
 
-
-
+</script>
 
 
 	<footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 
 </body>
 </html>
+
+
+
