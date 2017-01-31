@@ -7,12 +7,11 @@ function cancellaTopic(titolo, dataPubblicazioneTopic){
 	$('#modalCancellazioneBody').html('Sei sicuro di voler cancellare tutto il topic? In questo modo anche tutte le risposte ad esso relative saranno cancellate!');
 	$('#modalCancellaButton').click(function(){
 		$('#modalCancellazione').modal('hide');
-		alert('infunzione');
 		$.ajax({type:"POST",
 			url: "CancellaTopic",
 			data: { 
 				'titolo': titolo, 
-				'dataPubblicazioneTopic': dataPubblicazioneTopic // <-- the $ sign in the parameter name seems unusual, I would avoid it
+				'dataPubblicazioneTopic': dataPubblicazioneTopic
 			},
 			success: function(risposta){ //se la richiesta ha successo			
 				$('#modalFineOperazioneTitle').html('Operazione terminata');

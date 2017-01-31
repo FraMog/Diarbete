@@ -24,7 +24,14 @@ public class Risposta {
 		srcUtente="";
 	}
 
-	
+	public Risposta(Topic topicDiRiferimento, Timestamp dataInserimento) throws ParametroIllegaleException{
+		if(dataInserimento==null ) throw new ParametroIllegaleException("La data di inserimento del post non può essere vuota!");
+		this.body = "";
+		this.autoreRisposta = "";
+		this.dataInserimento = dataInserimento;
+		this.topicDiRiferimento=topicDiRiferimento;
+		this.tipologiaUtenteCheHaRisposto="";
+	}
 	
 
 

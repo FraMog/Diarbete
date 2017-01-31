@@ -10,38 +10,38 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import eccezioni.ParametroIllegaleException;
-import utenti.TipologieUtenti;
-
-@WebServlet("/InserisciTopic")
-public class InserisciTopic extends HttpServlet {
+@WebServlet("/CancellaRisposta")
+public class CancellaRisposta extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doPost(req, resp);
+		
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        String titoloPostDaCancellare= req.getParameter("titolo");
+        String dataPubblicazioneTopic= req.getParameter("dataPubblicazioneTopic");
+        String dataPubblicazioneRisposta=req.getParameter("dataPubblicazioneRisposta");
+ 
+		
 		try {
-			Topic topic = new Topic(req.getParameter("titolo"), "fracesco@studente.it", req.getParameter("argomento"), new Timestamp(System.currentTimeMillis()));
-			Risposta primoMessaggio= new Risposta(req.getParameter("body"), "fracesco@studente.it", new Timestamp(System.currentTimeMillis()),topic, TipologieUtenti.PAZIENTE);
-			if(!(new TopicDAO().inserisciTopic(topic))){
+			Topic topicDiRiferimento = new Topic(titoloPostDaCancellare, Timestamp.valueOf(dataPubblicazioneTopic));
+			Risposta rispostaDaCancellare = new Risposta(topicDiRiferimento, Timestamp.valueOf(dataPubblicazioneRisposta));
+			if(!(new RispostaDAO().cancellaRisposta(rispostaDaCancellare))){
 				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Non è stato possibile inserire il topic a causa di un errore interno del server. Riprovare più tardi");
 				return;
 			}
-			if(!(new RispostaDAO().inserisciRisposta(primoMessaggio))){
-				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Non è stato possibile inserire il topic a causa di un errore interno del server. Riprovare più tardi");
-				return;
-			}
-			resp.setStatus(HttpServletResponse.SC_OK);
+			resp.setStatus(HttpServletResponse.SC_OK);return;
+			
 		} catch (ParametroIllegaleException e) {
 			e.printStackTrace();
 			resp.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
 			return;
 		}
+		
 	}
 
 	

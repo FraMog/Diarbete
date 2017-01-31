@@ -34,7 +34,7 @@ public class CancellaTopic extends HttpServlet {
 				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Non è stato possibile inserire il topic a causa di un errore interno del server. Riprovare più tardi");
 				return;
 			}
-			resp.setStatus(HttpServletResponse.SC_OK);
+			resp.setStatus(HttpServletResponse.SC_OK);return;
 			
 		} catch (ParametroIllegaleException e) {
 			e.printStackTrace();

@@ -118,4 +118,40 @@ public class RispostaDAO {
 	
 	}
 
+	public boolean cancellaRisposta(Risposta rispostaDaCancellare) {
+		Connection conn = null;
+		PreparedStatement ps = null;
+		try{
+		conn = DBManager.getInstance().getConnection();
+		String query = "DELETE FROM messaggioforum WHERE titoloPost = ? AND dataPubblicazionePost = ? AND dataInserimentoRisposta=?";
+		ps = conn.prepareStatement(query);
+		ps.setString(1, rispostaDaCancellare.getTopicDiRiferimento().getTitolo());
+		ps.setTimestamp(2, rispostaDaCancellare.getTopicDiRiferimento().getDataInserimento());
+		ps.setTimestamp(3, rispostaDaCancellare.getDataInserimento());
+		ps.executeUpdate();
+		if(ps.getUpdateCount()==1) //verifico che l'update abbia avuto effetto su una riga
+			return true;
+		else
+			return false;
+				
+		} catch (SQLException e){
+			e.printStackTrace();
+			return false;
+		}
+		 finally{
+				if(ps!=null)
+					try {
+						ps.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				if(conn!=null)
+					try {
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+			}
+	}
+
 }
