@@ -21,6 +21,7 @@ public class Risposta {
 		this.dataInserimento = dataInserimento;
 		this.topicDiRiferimento=topicDiRiferimento;
 		this.tipologiaUtenteCheHaRisposto=tipologiaUtenteCheHaRisposto;
+		srcUtente="";
 	}
 
 	
@@ -92,12 +93,28 @@ public class Risposta {
 
 
 
+	public String getSrcUtente() {
+		return srcUtente;
+	}
+
+
+
+	public void setSrcUtente(String srcUtente) {
+		this.srcUtente = srcUtente;
+	}
+
+
+
+
+
+
 
 
 
 	private String body, autoreRisposta, tipologiaUtenteCheHaRisposto;
 	private Timestamp dataInserimento;
 	private Topic topicDiRiferimento;
+	private String srcUtente;
 
 	
 }

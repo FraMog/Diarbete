@@ -31,6 +31,7 @@ public class Topic {
 	public Topic(String titolo, Timestamp dataInserimento) throws ParametroIllegaleException {
 		super();
 		if(titolo==null  || titolo.length()==0) throw new ParametroIllegaleException("Il titolo non può essere vuoto!");
+		if(dataInserimento==null ) throw new ParametroIllegaleException("La data di inserimento del post non può essere vuota!");
 		this.titolo = titolo;
 		this.autorePost = "";
 		this.argomento = "";
