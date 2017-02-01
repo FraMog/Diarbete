@@ -119,6 +119,59 @@
 
 
 <%} %>
+
+<section class="container">
+	<section class="row clearfix">
+		<section class="col-md-12 column">
+   
+          <div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="text-center"><b>Pubblica una nuova risposta</b></h5>                     
+					</div>
+				
+				<section class="row panel-body">
+				<section class="col-xs-12 text-center">
+					<br />
+					
+            <div class="form-group">
+        <label for="envan" class="control-label col-xs-12 col-sm-2">Testo risposta</label>
+        <div class="col-xs-12 col-sm-10">
+          <textarea maxlength="256" name="body" class="form-control" id="bodyPost" placeholder="Inserisci qui la tua domanda/Spiega qui il tuo problema"></textarea>
+           <h6 class="pull-right" id="count_message_body"></h6>
+          </div>
+            </div>          
+            
+            <div class="row"></div>
+             <div class="form-group">
+        <div>
+            <button type="button" onclick="validaInserimentoNuovoPost()" class="btn btn-primary">Invia</button>
+        </div></div>
+                  </section>
+                  
+      
+                  
+				</section>
+				<div class="panel-footer">
+                  <div class="row">
+						<section class="col-md-8">
+                  	     <i class="fa fa-edit "></i><a data-toggle="modal" href="#modalCancellazione" onclick="cancellaTopic('<%=topic.getTitolo()%>','<%=topic.getDataInserimento().toString()%>')">Cancella il tuo topic  <i class="glyphicon glyphicon-remove"></i></a>
+                    
+                    </section>
+                 
+				</div>
+               </div>
+			</div>
+		</div>
+	</div>
+          
+          
+          
+		</section>
+	</section>
+</section>
+
 </section>
 
 
