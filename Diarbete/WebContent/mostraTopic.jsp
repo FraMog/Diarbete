@@ -52,22 +52,18 @@
 		<div class="col-md-12 column">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<section class="panel-title">
-                      <time class="pull-right col-xs-3" style="font-size:80%;">
+					 <div class="pull-left col-xs-11 col-md-9" id="id">
+                         <p style="word-wrap:break-word; font-size:80%;"><i class="fa fa-smile-o"></i> <b><%=topic.getTitolo()%></b></p>
+                      </div>
+					<div class="panel-title">
+                      <time class="pull-right col-xs-11  col-md-3" style="font-size:80%;">
                     Scritto il  <%= new java.text.SimpleDateFormat("dd-MM-yyyy").format(risposte.get(i).getDataInserimento())%> alle <%= new java.text.SimpleDateFormat("HH:mm:ss").format(risposte.get(i).getDataInserimento()).substring(0,8)%>
                       </time>
-                      <section class="pull-left col-xs-9" id="id">
-                         <p style="word-wrap:break-word; font-size:80%;"><i class="fa fa-smile-o"></i> <b><%=topic.getTitolo()%></b></p>
-                      </section>
-					</section>
+                     
+					</div>
 				</div>
 				<section class="row panel-body">
-					<section class="col-md-9">
-					<br />
-                     <%=risposte.get(i).getBody()%>
-                  </section>
-                  
-                  <section id="user-description" class="col-md-3 ">
+				  <section id="user-description" class="col-xs-9 col-md-3 pull-right">
                     	<section class="well">
                     <div class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cricle"></i><%=risposte.get(i).getAutoreRisposta()%><span class="caret"></span></a>
@@ -83,6 +79,12 @@
                           </figure>
                     	</section>
                   </section>
+					<section class="col-xs-12 col-md-9">
+					<br />
+                     <%=risposte.get(i).getBody()%>
+                  </section>
+                  
+      
                   
 				</section>
 				<div class="panel-footer">

@@ -81,4 +81,26 @@ dt{
     width:100%;
   	min-height:40px;
   }
+  
+  .panel-heading{
+      height:50px;
+    }  
+ 
+ #user-description{
+   min-width:150px;
+   max-width:250px;
+ }
+ 
+  @media screen and (max-width: 720px) {
+    .panel-heading{
+     height:100px;
+    }  
+    
+    #user-description{
+     border-left:none; 
+    }
+   
+  }
+	
+	
       
