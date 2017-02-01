@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="stile/stile.css">
 <link rel="stylesheet" href="stile/forum.css">
 <script src="javascript/forum/cancellaTopic.js"></script>
+<script src="javascript/forum/inserisciRispostaATopic.js"></script>
 <title>Forum</title>
 </head>
 
@@ -36,15 +37,17 @@
 <%if (topic!=null && risposte!=null){%>
 <%for (int i=0; i<risposte.size();i++){%>
 <section class="container">
+    <%if(i==0){%>
 	<section class="row clearfix">
 		<section class="col-md-12 column">
           
           <ol class="breadcrumb">
   				<li><a href="forum.jsp">Forum</a></li>
- 				 <li class="active"><%if(i==0){out.println(topic.getTitolo());}%></li>
+ 				 <li class="active"><%out.println(topic.getTitolo());%></li>
 		</ol>
 		</section>
 	</section>
+	<%}%>
 	<section class="row clearfix">
 		<section class="col-md-12 column">
    
@@ -53,7 +56,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					 <div class="pull-left col-xs-11 col-md-9" id="id">
-                         <p style="word-wrap:break-word; font-size:80%;"><i class="fa fa-smile-o"></i> <b><%=topic.getTitolo()%></b></p>
+                         <p style="word-wrap:break-word; font-size:80%;"><i class="fa fa-smile-o"></i> <b><%if(i==0){out.println(topic.getTitolo());}%></b></p>
                       </div>
 					<div class="panel-title">
                       <time class="pull-right col-xs-11  col-md-3" style="font-size:80%;">
@@ -146,7 +149,7 @@
             <div class="row"></div>
              <div class="form-group">
         <div>
-            <button type="button" onclick="validaInserimentoNuovoPost()" class="btn btn-primary">Invia</button>
+            <button type="button" onclick="inserisciRisposta('<%=topic.getTitolo()%>','<%=topic.getDataInserimento().toString()%>')" class="btn btn-primary">Invia</button>
         </div></div>
                   </section>
                   
