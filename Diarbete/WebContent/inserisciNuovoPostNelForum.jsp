@@ -73,14 +73,13 @@
 
        <div class="form-group">
         <div class="col-xs-offset-6">
-            <button type="submit" class="btn btn-primary">Invia</button>
+            <button type="button" onclick="validaInserimentoNuovoPost()" class="btn btn-primary">Invia</button>
         </div>
     </div>
 </form>
 
 <script>
 $("document").ready(function(){
-	validaInserimentoNuovoPost();
 	inizializzaValoriMassimaliInput();
 });	
 </script>
@@ -91,7 +90,7 @@ $("document").ready(function(){
   
   <%-- Fine form di inserimento --%>
   </section>
-
+<%@ include file="jspIncluse/modalFineOperazione.jsp" %>
 
 <footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 

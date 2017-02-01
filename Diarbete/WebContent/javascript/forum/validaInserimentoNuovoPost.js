@@ -3,7 +3,6 @@
  */
 
 function validaInserimentoNuovoPost(){
-	$("#inserisciNuovoPost").submit(function(event){
 
 		var regExpTitolo=new RegExp("^.{1,100}$");
 		if(!regExpTitolo.test($("#titoloPost").val())){
@@ -29,9 +28,14 @@ function validaInserimentoNuovoPost(){
 			event.preventDefault();
 			return;
 		}		
-
-
-	});
+				
+		$('#modalFineOperazioneTitle').html('Operazione terminata');
+		$('#modalFineOperazioneBody').html('Il topic &egrave; stato pubblicato con successo.');
+		$('#modalFineOperazione').on('hidden.bs.modal', function (e) {
+			$("#inserisciNuovoPost").submit();
+			})
+		$('#modalFineOperazione').modal('show');
+	
 }
 
 

@@ -15,7 +15,7 @@ function cancellaTopic(titolo, dataPubblicazioneTopic){
 			},
 			success: function(risposta){ //se la richiesta ha successo			
 				$('#modalFineOperazioneTitle').html('Operazione terminata');
-				$('#modalFineOperazioneBody').html('Il topic è stato cancellato con successo.');
+				$('#modalFineOperazioneBody').html('Il topic &egrave; stato cancellato con successo.');
 				$('#modalFineOperazione').on('hidden.bs.modal', function (e) {
 					window.location.replace("forum.jsp");
 					})
@@ -23,7 +23,7 @@ function cancellaTopic(titolo, dataPubblicazioneTopic){
 			},
 			error: function (response) { //se la richiesta fallisce
 				$('#modalFineOperazioneTitle').html('Operazione terminata');
-				$('#modalFineOperazioneBody').html('Non è stato possibile cancellare il topic a causa di un errore interno del server. Si prega di riprovare più tardi.');
+				$('#modalFineOperazioneBody').html('Non &egrave; stato possibile cancellare il topic a causa di un errore interno del server. Si prega di riprovare più tardi.');
 				$('#modalFineOperazione').modal('show');
 			}
 		});

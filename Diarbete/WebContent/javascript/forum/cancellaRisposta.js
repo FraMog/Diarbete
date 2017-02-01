@@ -12,7 +12,7 @@ function cancellaRisposta(titolo, dataPubblicazioneTopic, dataPubblicazioneRispo
 			},
 			success: function(risposta){ //se la richiesta ha successo			
 				$('#modalFineOperazioneTitle').html('Operazione terminata');
-				$('#modalFineOperazioneBody').html('La risposta è stato cancellata con successo.');
+				$('#modalFineOperazioneBody').html('La risposta &egrave; stato cancellata con successo.');
 				$('#modalFineOperazione').on('hidden.bs.modal', function (e) {
 					location.reload();
 					})
@@ -20,7 +20,7 @@ function cancellaRisposta(titolo, dataPubblicazioneTopic, dataPubblicazioneRispo
 			},
 			error: function (response) { //se la richiesta fallisce
 				$('#modalFineOperazioneTitle').html('Operazione terminata');
-				$('#modalFineOperazioneBody').html('Non è stato possibile cancellare la risposta a causa di un errore interno del server. Si prega di riprovare più tardi.');
+				$('#modalFineOperazioneBody').html('Non &egrave; stato possibile cancellare la risposta a causa di un errore interno del server. Si prega di riprovare più tardi.');
 				$('#modalFineOperazione').modal('show');
 			}
 		});
