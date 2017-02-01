@@ -28,6 +28,7 @@
 		$(document).ready(function(){
 			$('#homeMenuNavigazionale').removeClass("active");
 			$('#forumMenuNavigazionale').addClass("active");
+			
 		})
 	 </script>
 
@@ -183,7 +184,11 @@
 
 <%@include file="jspIncluse/modalCancellazione.jsp" %>
 <%@include file="jspIncluse/modalFineOperazione.jsp" %>
-
+<script>
+$(document).ready(function(){
+	inizializzaValoriMassimaliInput();
+})
+</script>
 
 </body>
 </html>
