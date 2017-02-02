@@ -37,7 +37,6 @@ function inserisciPaginatorInRisultatiRicerca (paginaDaCercare, titoloPostdaCerc
 
 
 function modificaPaginator(){
-	alert(parseInt($('#numeroTotaleTopic').html()));
 	 $('#show_paginator').bootpag({
 	      total: Math.ceil(parseInt($('#numeroTotaleTopic').html())/(5))
 	  });

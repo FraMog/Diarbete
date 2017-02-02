@@ -57,7 +57,6 @@
 <footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 
 <script>
-alert('<%=request.getParameter("titoloPostdaCercare")%>');
  cercaPerTitolo(1, '<%=request.getParameter("titoloPostdaCercare")%>');
 </script>
 
