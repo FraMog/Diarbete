@@ -23,7 +23,7 @@
 			<ul class="nav navbar-nav">
 				<li id="homeMenuNavigazionale" class="active"><a href="home.jsp">Home</a></li>
 				<li id="consigliMenuNavigazionale"><a>Consigli</a></li> 
-				<li id="eventiMenuNavigazionale"><a href="#">Eventi</a></li>
+				<li id="eventiMenuNavigazionale"><a href="eventi.jsp">Eventi</a></li>
 				<li id="forumMenuNavigazionale"><a href="forum.jsp">Forum</a></li>
 				<li id="contattiMenuNavigazionale"><a href="#">Contatti</a></li>
 			</ul>
