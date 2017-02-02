@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="stile/forum.css">
 <script src="javascript/forum/cancellaTopic.js"></script>
 <script src="javascript/forum/inserisciRispostaATopic.js"></script>
+<script src="javascript/forum/cancellaRisposta.js"></script>
 <title>Forum</title>
 </head>
 
@@ -160,7 +161,7 @@
 				<div class="panel-footer">
                   <div class="row">
 						<section class="col-md-8">
-                  	     <i class="fa fa-edit "></i><a data-toggle="modal" href="#modalCancellazione" onclick="cancellaTopic('<%=topic.getTitolo()%>','<%=topic.getDataInserimento().toString()%>')">Cancella il tuo topic  <i class="glyphicon glyphicon-remove"></i></a>
+                  	     <i class="fa fa-edit "></i>
                     
                     </section>
                  
