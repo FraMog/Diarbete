@@ -9,7 +9,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
-	<script src="javascript/forum/mostraPaginaTopic.js"></script>
 	<script src="javascript/forum/cancellaTopic.js"></script>
 	<script src="javascript/forum/cercaPerTitolo.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
@@ -36,7 +35,7 @@
 <div class="container">
   <div class="page-header page-heading" style="margin:0px">
     <ol class="breadcrumb pull-right where-am-i">
-      <li><a href="#">Forums</a></li>
+      <li><a href="forum.jsp">Forum</a></li>
       <li class="active"><%=request.getParameter("titoloPostdaCercare") %></li>
     </ol>
     <div class="clearfix"></div>
