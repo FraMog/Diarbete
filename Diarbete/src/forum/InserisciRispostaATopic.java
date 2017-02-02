@@ -27,8 +27,8 @@ public class InserisciRispostaATopic extends HttpServlet {
 
 		try {
 			Topic topic = new Topic(req.getParameter("titolo"), Timestamp.valueOf(req.getParameter("dataPubblicazioneTopic")));
-			Risposta primoMessaggio= new Risposta(req.getParameter("body"), "fracesco@studente.it", new Timestamp(System.currentTimeMillis()),topic, TipologieUtenti.PAZIENTE);
-			if(!(new RispostaDAO().inserisciRisposta(primoMessaggio))){
+			Risposta risposta= new Risposta(req.getParameter("body"), "utente@utente.it", new Timestamp(System.currentTimeMillis()),topic, TipologieUtenti.PAZIENTE);
+			if(!(new RispostaDAO().inserisciRisposta(risposta))){
 				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Non è stato possibile inserire il topic a causa di un errore interno del server. Riprovare più tardi");
 				return;
 			}

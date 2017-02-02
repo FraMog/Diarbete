@@ -107,11 +107,23 @@ public class Topic {
 	}
 
 
+	
 
+
+	public int getNumeroDiRisposte() {
+		return numeroDiRisposte;
+	}
+
+
+
+	public void setNumeroDiRisposte(int numeroDiRisposte) {
+		this.numeroDiRisposte = numeroDiRisposte;
+	}
 
 
 
 	private String titolo, autorePost, argomento;
 	private Timestamp dataInserimento;
 	private ArrayList <Risposta> risposteAlTopic;
+	private int numeroDiRisposte;
 }
