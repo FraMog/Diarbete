@@ -8,14 +8,14 @@
 	<thead>
 		<tr>
 			<th class="cell-stat"></th>
-			<th>
+			<th class="col-xs-8">
 				<h3 style="display: inline;">Discussioni forum</h3> <a
 				href="inserisciNuovoPostNelForum.jsp"><i
 					class="glyphicon glyphicon-plus-sign pull-right"></i></a>
 			</th>
-			<th class="cell-stat text-center hidden-xs hidden-sm">Argomento</th>
-			<th class="cell-stat text-center hidden-xs hidden-sm">Risposte</th>
-			<th class="cell-stat-2x hidden-xs hidden-sm">Ultima risposta</th>
+			<th class="text-center col-xs-1" >Argomento</th>
+			<th class="text-center col-xs-1">Risposte</th>
+			<th class="col-xs-2">Ultima risposta</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -23,7 +23,7 @@
 		<tr>
 			<td class="text-center"><i
 				class="fa fa-exclamation fa-2x text-danger"></i></td>
-			<td>
+			<td class="col-xs-8">
 				<h4 style="display:inline;">
 					<a href="VisualizzaPostForum?titolo=<%=topicDaMostrare.get(i).getTopicDiRiferimento().getTitolo()%>&dataPubblicazioneTopic=<%=topicDaMostrare.get(i).getTopicDiRiferimento().getDataInserimento().toString()%>"><%=topicDaMostrare.get(i).getTopicDiRiferimento().getTitolo()%></a><br>
 					<small>Pubblicato il <b><%= new java.text.SimpleDateFormat("dd-MM-yyyy").format(topicDaMostrare.get(i).getTopicDiRiferimento().getDataInserimento())%></b> alle <b><%= new java.text.SimpleDateFormat("HH:mm:ss").format(topicDaMostrare.get(i).getTopicDiRiferimento().getDataInserimento()).substring(0,8)%> da <b><%=topicDaMostrare.get(i).getTopicDiRiferimento().getAutorePost()%></b></small>
@@ -31,9 +31,9 @@
 				<a data-toggle="modal" href="#modalCancellazione" onclick="cancellaTopic('<%=topicDaMostrare.get(i).getTopicDiRiferimento().getTitolo()%>','<%=topicDaMostrare.get(i).getTopicDiRiferimento().getDataInserimento().toString()%>')">
 				    <i class="glyphicon glyphicon-remove pull-right" style="font-size:25px;"></i></a>
 			</td>
-			<td class="text-center hidden-xs hidden-sm"><%=topicDaMostrare.get(i).getTopicDiRiferimento().getArgomento()%></td>
-			<td class="text-center hidden-xs hidden-sm"><%=topicDaMostrare.get(i).getTopicDiRiferimento().getNumeroDiRisposte()%></td>
-			<td class="hidden-xs hidden-sm">by <a href="#"><%=topicDaMostrare.get(i).getAutoreRisposta()%></a><br>
+			<td style="word-wrap:break-word; max-width:250px;" class="text-center col-xs-1"><%=topicDaMostrare.get(i).getTopicDiRiferimento().getArgomento()%></td>
+			<td style="word-wrap:break-word; max-width:250px;" class="text-center col-xs-1"><%=topicDaMostrare.get(i).getTopicDiRiferimento().getNumeroDiRisposte()%></td>
+			<td style="word-wrap:break-word; max-width:250px;" class="col-xs-2">by <a href="#"><%=topicDaMostrare.get(i).getAutoreRisposta()%></a><br>
 			<small><i class="fa fa-clock-o">il <b><%= new java.text.SimpleDateFormat("dd-MM-yyyy").format(topicDaMostrare.get(i).getDataInserimento())%></b> alle <b><%= new java.text.SimpleDateFormat("HH:mm:ss").format(topicDaMostrare.get(i).getDataInserimento()).substring(0,8)%></i></small></td>
 		</tr>
 		  <%} %>
