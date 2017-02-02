@@ -16,6 +16,7 @@
 <script src="javascript/forum/cancellaTopic.js"></script>
 <script src="javascript/forum/inserisciRispostaATopic.js"></script>
 <script src="javascript/forum/cancellaRisposta.js"></script>
+<script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
 <title>Forum</title>
 </head>
 

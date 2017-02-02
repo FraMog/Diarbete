@@ -11,7 +11,7 @@
 <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
 	<script src="javascript/forum/mostraPaginaTopic.js"></script>
 	<script src="javascript/forum/cancellaTopic.js"></script>
-	<script src="javascript/forum/inserisciPaginator.js"></script>
+	<script src="javascript/forum/cercaPerTitolo.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <link rel="stylesheet" href="stile/forum.css">
 <title>Forum</title>
@@ -37,37 +37,13 @@
   <div class="page-header page-heading" style="margin:0px">
     <ol class="breadcrumb pull-right where-am-i">
       <li><a href="#">Forums</a></li>
-      <li class="active">List of topics</li>
+      <li class="active"><%=request.getParameter("titoloPostdaCercare") %></li>
     </ol>
     <div class="clearfix"></div>
   </div>
-  <p class="lead">Nel <b>forum</b> potrai aprire nuovi topics per permettere ad altri di chiarire i tuoi dubbi.</p>
-  <p>Controlla prima, cercando nella sottostante casella di ricerca, se qualche altro utente ha gia avuto il tuo stesso problema ricevendo una risposta soddisfacente, per evitare inutili duplicati.</p>
- 
+  <p class="lead">Risultati ricerca per titolo <b><%=request.getParameter("titoloPostdaCercare") %></b> </p>
 
-<fieldset class="scheduler-border">
- <legend class="scheduler-border">Form di ricerca</legend>
- <div class="container">
-    <h3 class ="col-xs-12 col-sm-3 col-sm-offset-5">Cerca per titolo topic</h3>
-    <form action="ricercaTopic.jsp" method="post" id="formRicercaTopic">
- 	<div class="col-xs-12 col-sm-3" style="padding-top:20px;">
-					<div id="custom-search-input">
-						<div class="input-group col-xs-12" style="height: 10px;">
-							<input type="text" name="titoloPostdaCercare" id="titoloPostDaCercare" class="form-control input-xs-12"
-								placeholder="Inserisci titolo topic" /> <span class="input-group-btn">
-								<button class="btn btn-info btn-lg" type="button" onclick="document.getElementById('formRicercaTopic').submit()">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</span>
-						
-						</div>
-					</div>
-				</div>
-	 </form>		
- </div>
-</fieldset>
 
- <h2 id="introductionTopic" style="text-align:center;">Elenco Topic presenti nel forum</h2>
  <div id="topicContainer">
  </div>
  
@@ -81,12 +57,13 @@
 <footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 
 <script>
-	mostraPaginaTopic(1);
+alert('<%=request.getParameter("titoloPostdaCercare")%>');
+ cercaPerTitolo(1, '<%=request.getParameter("titoloPostdaCercare")%>');
 </script>
 
 <script>
 		$(document).ready(function(){
-			inserisciPaginator();
+			inserisciPaginatorInRisultatiRicerca(1, '<%=request.getParameter("titoloPostdaCercare")%>');
 		});
 		
 </script>

@@ -36,7 +36,7 @@ public class InserisciTopic extends HttpServlet {
 				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Non è stato possibile inserire il topic a causa di un errore interno del server. Riprovare più tardi");
 				return;
 			}
-			resp.setStatus(HttpServletResponse.SC_OK);
+			resp.sendRedirect("forum.jsp");
 		} catch (ParametroIllegaleException e) {
 			e.printStackTrace();
 			resp.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
