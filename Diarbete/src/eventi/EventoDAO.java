@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 import databaseconnection.DBManager;
 import eccezioni.ParametroIllegaleException;
-import forum.Risposta;
-import forum.Topic;
 import utenti.TipologieUtenti;
 
 public class EventoDAO {

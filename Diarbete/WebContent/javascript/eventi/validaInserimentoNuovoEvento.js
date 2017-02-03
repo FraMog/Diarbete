@@ -8,7 +8,7 @@ function validaInserimentoNuovoEvento(){
 			return;
 		}	
 
-		var regExpDescrizione=new RegExp("^.{1,1024}$");
+		var regExpDescrizione=new RegExp("^.|\n{1,1024}$");
 		if(!regExpDescrizione.test($("#descrizioneEvento").val())){
 			$('#alertErroreInserimentoNuovoEvento').css('display', 'block');
 			$('#alertErroreInserimentoNuovoEventoTesto').html("<strong>Errore nell'inserimento dell'evento!</strong> La descrizione deve avere lunghezza 1-1024");

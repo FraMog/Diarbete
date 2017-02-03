@@ -33,6 +33,15 @@
 
 
 <section class="row">
+<article class="row clearfix">
+		<article class="col-md-12 column">
+          
+          <ol class="breadcrumb">
+  				<li class="active"><a href="eventi.jsp">Eventi</a></li>
+		</ol>
+		</article>
+</article>
+
 
 <div class="text-center">
  <a href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>

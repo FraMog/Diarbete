@@ -35,10 +35,14 @@
 <section class="row">
 <div class="container">
   <div class="page-header page-heading" style="margin:0px">
-    <ol class="breadcrumb pull-right where-am-i">
-      <li><a href="#">Forums</a></li>
-      <li class="active">List of topics</li>
-    </ol>
+    <article class="row clearfix">
+		<article class="col-md-12 column">
+          
+          <ol class="breadcrumb">
+  				<li class="active"><a href="forum.jsp">Forum</a></li>
+		</ol>
+		</article>
+	</article>
     <div class="clearfix"></div>
   </div>
   <p class="lead">Nel <b>forum</b> potrai aprire nuovi topics per permettere ad altri di chiarire i tuoi dubbi.</p>
