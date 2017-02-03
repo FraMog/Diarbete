@@ -22,7 +22,6 @@ function validaInserimentoNuovoPost(){
 		
 		var regExpBody=new RegExp("^.{1,256}$");
 		if(!regExpBody.test($("#bodyPost").val())){
-			alert('NON macth3');
 			$('#alertErroreInserimentoNuovoPost').css('display', 'block');
 			$('#alertErroreInserimentoNuovoPostTesto').html("<strong>Errore nell'inserimento del post!</strong> La domanda/problema deve avere lunghezza 1-256");
 			event.preventDefault();

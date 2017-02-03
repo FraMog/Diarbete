@@ -113,7 +113,7 @@
     <div class="form-group">
         <label for="envan" class="control-label col-xs-12 col-sm-2">Data Evento</label>
         <div class="col-xs-12 col-md-10">
-        <input type="datetime-local" name="data" id="dataEvento" step="1">
+        <input style="min-width:400px;" type="datetime-local" name="data" id="dataEvento" step="1" placeholder="Inserisci una data valida nel formato yyyy-mm-ddThh:mm:ss">
           </div>
             </div>       
    

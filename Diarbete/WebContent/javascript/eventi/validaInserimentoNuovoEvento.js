@@ -2,7 +2,6 @@ function validaInserimentoNuovoEvento(){
 
 		var regExpTitolo=new RegExp("^.{1,100}$");
 		if(!regExpTitolo.test($("#titoloEvento").val())){
-			alert('non corrisponde');
 			$('#alertErroreInserimentoNuovoEvento').css('display', 'block');
 			$('#alertErroreInserimentoNuovoEventoTesto').html("<strong>Errore nell'inserimento dell'evento!</strong> Il titolo deve avere lunghezza 1-100");
 			event.preventDefault();
@@ -45,7 +44,7 @@ function validaInserimentoNuovoEvento(){
 		var regExpData=new RegExp("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$");
 		if(!regExpData.test($("#dataEvento").val())){
 			$('#alertErroreInserimentoNuovoEvento').css('display', 'block');
-			$('#alertErroreInserimentoNuovoEventoTesto').html("<strong>Errore nell'inserimento dell'evento!</strong> La data deve essere nel formato yyyy-mm-ssThh:mm:ss");
+			$('#alertErroreInserimentoNuovoEventoTesto').html("<strong>Errore nell'inserimento dell'evento!</strong> La data deve essere nel formato yyyy-mm-ddThh:mm:ss");
 			event.preventDefault();
 			return;
 		}	
