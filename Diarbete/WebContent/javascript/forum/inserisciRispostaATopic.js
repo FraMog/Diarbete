@@ -6,8 +6,8 @@ function inserisciRisposta(titolo, dataPubblicazioneTopic){
 		
 		var regExpBody=new RegExp("^.{1,256}$");
 		if(!regExpBody.test($("#bodyPost").val())){
-			$('#alertErroreInserimentoNuovoPost').css('display', 'block');
-			$('#alertErroreInserimentoNuovoPostTesto').html("<strong>Errore nell'inserimento del post!</strong> La domanda/problema deve avere lunghezza 1-256");
+			$('#alertErroreInserimentoNuovaRisposta').css('display', 'block');
+			$('#alertErroreInserimentoNuovaRispostaTesto').html("<strong>Errore nell'inserimento della risposta!</strong> La risposta deve avere lunghezza 1-256");
 			event.preventDefault();
 			return;
 		}	

@@ -12,6 +12,7 @@
 	<script src="javascript/forum/mostraPaginaTopic.js"></script>
 	<script src="javascript/forum/cancellaTopic.js"></script>
 	<script src="javascript/forum/inserisciPaginator.js"></script>
+	<script src="javascript/forum/modificaPaginator.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <link rel="stylesheet" href="stile/forum.css">
 <title>Forum</title>

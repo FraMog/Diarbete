@@ -11,6 +11,8 @@
 <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
 	<script src="javascript/forum/cancellaTopic.js"></script>
 	<script src="javascript/forum/cercaPerTitolo.js"></script>
+	<script src="javascript/forum/inserisciPaginator.js"></script>
+	<script src="javascript/forum/modificaPaginator.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <link rel="stylesheet" href="stile/forum.css">
 <title>Forum</title>

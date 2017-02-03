@@ -151,6 +151,11 @@
             </div>          
             
             <div class="row"></div>
+      <div class="alert alert-danger fade in" id="alertErroreInserimentoNuovaRisposta" style="display:none;">
+      <a  href="#" class="close" onclick="document.getElementById('alertErroreInserimentoNuovaRisposta').style.display='none'">&times;</a>
+       <p id="alertErroreInserimentoNuovaRispostaTesto"></p>
+    </div>
+            
              <div class="form-group">
         <div>
             <button type="button" onclick="inserisciRisposta('<%=topic.getTitolo()%>','<%=topic.getDataInserimento().toString()%>')" class="btn btn-primary">Invia</button>
