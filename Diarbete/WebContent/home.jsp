@@ -39,17 +39,8 @@
       <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
     </div>
   </div>
-  <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
+  <div class="card col-xs-12 col-sm-4" id="ultimoEventoInserito">
+    
   </div>
   <div class="card col-xs-12 col-sm-4" id="ultimaRispostaPost">
 
@@ -68,6 +59,16 @@
 		},
 		error: function (response) { //se la richiesta fallisce
 			$('#ultimaRispostaPost').html(risposta);
+	    }
+	});
+	
+	$.ajax({type:"POST",
+		url: "MostraUltimoEventoInserito",
+		success: function(risposta){ //se la richiesta ha successo
+			$('#ultimoEventoInserito').html(risposta);
+		},
+		error: function (response) { //se la richiesta fallisce
+			$('#ultimoEventoInserito').html(risposta);
 	    }
 	});
 
