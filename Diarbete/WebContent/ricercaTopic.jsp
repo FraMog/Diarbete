@@ -34,10 +34,15 @@
 <section class="row">
 <div class="container">
   <div class="page-header page-heading" style="margin:0px">
-    <ol class="breadcrumb pull-right where-am-i">
-      <li><a href="forum.jsp">Forum</a></li>
-      <li class="active"><%=request.getParameter("titoloPostdaCercare") %></li>
-    </ol>
+   	     <article class="row clearfix">
+		<article class="col-md-12 column">
+          <ol class="breadcrumb">
+  		<li><a href="forum.jsp">Forum</a></li>
+  		<li class="active"><%=request.getParameter("titoloPostdaCercare") %></li>
+		</ol>
+		</article>
+	</article>
+      
     <div class="clearfix"></div>
   </div>
   <p class="lead">Risultati ricerca per titolo <b><%=request.getParameter("titoloPostdaCercare") %></b> </p>

@@ -75,7 +75,7 @@
  <div id="topicContainer">
  </div>
  
- <div id="show_paginator" class="pull-right"></div>
+ <div id="show_paginator" class="pull-right"></div><p style=>
  
 </div>
 </section>
