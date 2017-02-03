@@ -11,7 +11,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
-<title>Home Page</title>
+<title>Eventi</title>
 
 </head>
 
@@ -34,9 +34,17 @@
 
 <section class="row">
 
+<div class="text-center">
+ <a href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>
+</div>
+
 <div class="card-group">
   <div class="card col-xs-12 col-sm-4">
+    <div>
+    <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="alert('click')">
+				    <i class="glyphicon glyphicon-remove pull-right" style="font-size:25px;"></i></a>
     <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
+    </div>
     <div class="card-block">
       <h4 class="card-title">Titolo ultimo consiglio</h4>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

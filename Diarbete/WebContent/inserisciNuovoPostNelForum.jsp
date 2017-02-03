@@ -67,7 +67,7 @@
    
 
     <div class="alert alert-danger fade in" id="alertErroreInserimentoNuovoPost" style="display:none;">
-        <a  href="#" class="close" data-dismiss="alert">&times;</a>
+        <a  href="#" class="close" onclick="document.getElementById('alertErroreInserimentoNuovoPost').style.display='none'">&times;</a>
         <p id="alertErroreInserimentoNuovoPostTesto"></p>
     </div>
 
