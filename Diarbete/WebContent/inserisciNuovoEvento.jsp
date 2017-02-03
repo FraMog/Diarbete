@@ -37,7 +37,7 @@
 <%-- Il form di inserimento --%>
 <div class="row">
     	<div class="col-xs-12 col-md-10 col-md-offset-1">
-      	<form id="inserisciNuovoPost" class="form-horizontal" action="InserisciEvento" method="POST">
+      	<form id="inserisciNuovoEvento" class="form-horizontal" action="InserisciEvento" method="POST">
     <div class="form-group">
         <label for="envan" class="control-label col-xs-12 col-sm-2">Titolo evento</label>
         <div class="col-xs-12 col-md-10">

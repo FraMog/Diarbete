@@ -74,14 +74,36 @@ function validaInserimentoNuovoEvento(){
 				}
 			} else console.log( "Il tuo browser non supporta la validazione dell'immagine" );
 		 }	
+		alert($("#dataEvento").val().substring(0,10) + " " + $("#dataEvento").val().substring(11,19));
+		$.ajax({type:"POST",
+			url: "InserisciNuovoEvento",
+			cache: false,
+			contentType: false,
+			processData: false,
+			data: new FormData($("#inserisciNuovoEvento")[0]),
+			success: function(risposta){ //se la richiesta ha successo			
+				$('#modalFineOperazioneTitle').html('Operazione terminata');
+				$('#modalFineOperazioneBody').html('L\'evento &egrave; stato pubblicato con successo.');
+				$('#modalFineOperazione').on('hidden.bs.modal', function (e) {
+					window.location.replace("eventi.jsp");
+					})
+				$('#modalFineOperazione').modal('show');
+			},
+			error: function (response) { //se la richiesta fallisce
+				$('#modalFineOperazioneTitle').html('Operazione terminata');
+				$('#modalFineOperazioneBody').html('Non &egrave; stato possibile pubblicare l\'evento a causa di un errore.\nL\'errore riscontrato &egrave; ' + response.responseText);
+				$('#modalFineOperazione').modal('show');
+			}
+		});
 		
+		/*
 		$('#modalFineOperazioneTitle').html('Operazione terminata');
-		$('#modalFineOperazioneBody').html('Il topic &egrave; stato pubblicato con successo.');
+		$('#modalFineOperazioneBody').html('L\'evento &egrave; stato pubblicato con successo.');
 		$('#modalFineOperazione').on('hidden.bs.modal', function (e) {
 			$("#inserisciNuovoPost").submit();
 			})
 		$('#modalFineOperazione').modal('show');
-	
+	*/
 }
 
 
