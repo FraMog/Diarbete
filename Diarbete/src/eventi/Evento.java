@@ -32,6 +32,16 @@ public class Evento {
 	}
 
 	
+	
+	public Evento(String titolo, Timestamp dataPubblicazioneEvento) throws ParametroIllegaleException {
+		if(titolo==null  || titolo.length()==0) throw new ParametroIllegaleException("Il titolo non può essere vuoto!");
+		if(dataPubblicazioneEvento==null) throw new ParametroIllegaleException("La data di pubblicazione dell'evento non può essere vuota!");
+		this.titolo=titolo;
+		this.dataPubblicazioneEvento=dataPubblicazioneEvento;
+	}
+
+
+
 	public String getTitolo() {
 		return titolo;
 	}

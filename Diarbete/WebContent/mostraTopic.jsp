@@ -126,6 +126,7 @@
 
 <%} %>
 
+<%if (topic!=null && risposte!=null){%>
 <section class="container">
 	<section class="row clearfix">
 		<section class="col-md-12 column">
@@ -177,7 +178,7 @@
 		</section>
 	</section>
 </section>
-
+<%} %>
 </section>
 
 

@@ -26,7 +26,7 @@ public class VisualizzaPostForum extends HttpServlet {
 		    req.setAttribute("topicDaMostrare", topicDaMostrare);
 		    req.getRequestDispatcher("mostraTopic.jsp").forward(req, resp);
 		    return;
-		} catch (ParametroIllegaleException e) {
+		} catch (ParametroIllegaleException  | IllegalArgumentException e) {
 			e.printStackTrace();
 			  req.setAttribute("elencoRisposteAlTopic", null);
 			  req.setAttribute("topicDaMostrare", null);

@@ -99,6 +99,49 @@ public class EventoDAO {
 			}
 		
 }
+
+
+	public Evento mostraEvento(Evento eventoDaMostrare) throws ParametroIllegaleException {
+		Connection conn = null;
+		PreparedStatement ps = null;
+		try{
+		conn = DBManager.getInstance().getConnection();
+		
+				String query = "SELECT regione, dataInserimento, dataEvento, provincia, comune, indirizzo, descrizione, src, titolo, dottorePubblicante " +
+						"FROM evento where titolo = ? AND dataInserimento = ?"; 
+				
+				ps = conn.prepareStatement(query); 
+				ps.setString(1, eventoDaMostrare.getTitolo());
+				ps.setTimestamp(2, eventoDaMostrare.getDataPubblicazioneEvento());
+				 System.out.println(ps);
+				ResultSet resultSet= ps.executeQuery();
+				if(!resultSet.next()){
+					return null;
+				}
+				
+				Evento eventoDettagliato= new Evento(resultSet.getString(9), resultSet.getString(7), resultSet.getString(1), resultSet.getString(4), resultSet.getString(5), resultSet.getString(6), resultSet.getTimestamp(3), resultSet.getTimestamp(2), resultSet.getString(10), resultSet.getString(8));
+				
+			return eventoDettagliato;
+		} catch (SQLException e){
+			e.printStackTrace();
+			return null;
+		}
+		 finally{
+				if(ps!=null)
+					try {
+						ps.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				if(conn!=null)
+					try {
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+			}
+		
+	}
 	
 	
 }

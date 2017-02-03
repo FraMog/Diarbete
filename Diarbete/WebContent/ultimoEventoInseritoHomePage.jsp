@@ -11,6 +11,8 @@
       <%}else{ %>
      	 <p class="card-text"><%=ultimoEventoInserito.getDescrizione().substring(0, 256)%></p>
       <%} %>
+       <a class="pull-right" href="VisualizzaEvento?titolo=<%=ultimoEventoInserito.getTitolo()%>&dataPubblicazioneEvento=<%=ultimoEventoInserito.getDataPubblicazioneEvento().toString()%>">Per saperne di più--></a>
+    	<div class="row"></div>
     </div>
     <div class="card-footer">
       <small class="text-muted">Pubblicato <%=new java.text.SimpleDateFormat("dd-MM-yyyy").format(ultimoEventoInserito.getDataPubblicazioneEvento())%> alle <%= new java.text.SimpleDateFormat("HH:mm:ss").format(ultimoEventoInserito.getDataPubblicazioneEvento()).substring(0,8)%></small>
