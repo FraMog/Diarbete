@@ -116,7 +116,6 @@ public class EventoDAO {
 				}
 				
 				Evento eventoDettagliato= new Evento(resultSet.getString(9), resultSet.getString(7), resultSet.getString(1), resultSet.getString(4), resultSet.getString(5), resultSet.getString(6), resultSet.getTimestamp(3), resultSet.getTimestamp(2), resultSet.getString(10), resultSet.getString(8));
-				System.out.println(resultSet.getString(7).replace("\n", "<br \\>"));
 				return eventoDettagliato;
 		} catch (SQLException e){
 			e.printStackTrace();
@@ -137,6 +136,42 @@ public class EventoDAO {
 					}
 			}
 		
+	}
+
+
+	public boolean cancellaEvento(Evento eventoDaCancellare) {
+		Connection conn = null;
+		PreparedStatement ps = null;
+		try{
+		conn = DBManager.getInstance().getConnection();
+		String query = "DELETE FROM evento WHERE titolo = ? AND dataInserimento = ?";
+		ps = conn.prepareStatement(query);
+		ps.setString(1, eventoDaCancellare.getTitolo());
+		ps.setTimestamp(2, eventoDaCancellare.getDataPubblicazioneEvento());
+		ps.executeUpdate();
+		if(ps.getUpdateCount()==1) //verifico che l'update abbia avuto effetto su una riga
+			return true;
+		else
+			return false;
+				
+		} catch (SQLException e){
+			e.printStackTrace();
+			return false;
+		}
+		 finally{
+				if(ps!=null)
+					try {
+						ps.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				if(conn!=null)
+					try {
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+			}
 	}
 	
 	

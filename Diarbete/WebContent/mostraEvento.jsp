@@ -1,7 +1,5 @@
 <%@page import="eventi.Evento"%>
-<%
-	Evento evento = (Evento) request.getAttribute("eventoDettagliato");
-%>
+<%Evento evento = (Evento) request.getAttribute("eventoDettagliato");%>
 <!DOCTYPE html>
 
 
@@ -14,6 +12,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="javascript/eventi/cancellaEvento.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Eventi</title>
 
@@ -44,25 +43,20 @@
 
 				<ol class="breadcrumb">
 					<li><a href="eventi.jsp">Eventi</a></li>
-					<%
-						if (evento != null) {
-					%>
+					<% if (evento != null) {%>
 					<li class="active">
-						<%
-							out.println(evento.getTitolo());
-						%>
+						<%out.println(evento.getTitolo());%>
 					</li>
-					<%
-						}
-					%>
+					<%}%>
 				</ol>
 			</article>
 		</article>
 
 		<div class="text-center">
-			<a href="#" class="btn btn-danger">Elimina Evento</a> <a
-				href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica
-				nuovo evento</a>
+		<% if (evento != null) {%>
+			<a data-toggle="modal" href="#modalCancellazione" onclick="cancellaEvento('<%=evento.getTitolo()%>','<%=evento.getDataPubblicazioneEvento().toString()%>')" class="btn btn-danger">Elimina Evento</a>
+		<%}%>
+			 <a href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>
 		</div>
 
 
@@ -70,7 +64,7 @@
 		<div id="containerHeaderEvento">
 			<img class="col-xs-12 col-sm-4 pull-right"
 				src="img/eventi/<%=evento.getSrcEvento()%>" alt="Card image cap">
-			<div id="infoEventoPrincipali" style="margin-left: 100px;"
+			<div id="infoEventoPrincipali"
 				class="col-xs-12 col-sm-7">
 				<h1>
 					<b><%=evento.getTitolo()%></b>
@@ -84,9 +78,11 @@
 					<%=evento.getRegione()%></h6>
 			</div>
 		</div>
-		<div class="row" style="margin-top: 200px; margin-left: 100px;"
+		<div class="row"></div>
+		<div style="padding-left: 15px"
 			id="containerDescrizioneEvento">
-			<%=evento.getDescrizione().replace("\n", "<br \\>")%>
+			<h4><b>Dettagli Evento</b></h4>
+			<h6><%=evento.getDescrizione().replace("\n", "<br \\>")%></h6>
 		</div>
 		<%} else {%>
 		<div class="alert alert-danger fade in">
@@ -106,5 +102,7 @@
 
 	<footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
 
+<%@include file="jspIncluse/modalCancellazione.jsp" %>
+<%@include file="jspIncluse/modalFineOperazione.jsp" %>
 </body>
 </html>
