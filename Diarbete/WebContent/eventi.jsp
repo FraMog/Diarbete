@@ -14,6 +14,7 @@
 	<script src="javascript/eventi/mostraPaginaEventi.js"></script>
 	<script src="javascript/eventi/inserisciPaginator.js"></script>
 	<script src="javascript/eventi/modificaPaginator.js"></script>
+	<script src="javascript/eventi/cancellaEvento.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Eventi</title>
 

@@ -7,7 +7,7 @@
 <%for (int i=0; i<eventiDaMostrare.size();i++){%>
    <div style="border: 1px solid #ccc;" id="containerItemElencoEventi" class="col-xs-12 col-sm-4">
    <div>
-    <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="alert('click')">
+    <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="cancellaEvento('<%=eventiDaMostrare.get(i).getTitolo()%>','<%=eventiDaMostrare.get(i).getDataPubblicazioneEvento().toString()%>')">
 				    <i class="glyphicon glyphicon-remove pull-right" style="font-size:25px;"></i></a>
 	<img class="card-img-top center-block" src="img/eventi/<%=eventiDaMostrare.get(i).getSrcEvento()%>" alt="Card image cap">
     </div>   
