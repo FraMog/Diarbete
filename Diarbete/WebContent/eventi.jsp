@@ -10,6 +10,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
+	<script src="javascript/eventi/mostraPaginaEventi.js"></script>
+	<script src="javascript/eventi/inserisciPaginator.js"></script>
+	<script src="javascript/eventi/modificaPaginator.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Eventi</title>
 
@@ -47,90 +51,27 @@
  <a href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>
 </div>
 
-<div class="card-group">
-  <div class="card col-xs-12 col-sm-4">
-    <div>
-    <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="alert('click')">
-				    <i class="glyphicon glyphicon-remove pull-right" style="font-size:25px;"></i></a>
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    </div>
-    <div class="card-block">
-      <h4 class="card-title">Titolo ultimo consiglio</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-  <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-   <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-   <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-   <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-   <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
-    <div class="card-block">
-      <h4 class="card-title center-block">Titolo ultimo evento</h4>
-      <small class="text-muted">Evento del <b>29-01-2017</b> alle ore <b>12:25</b> a <b>Salerno, Campania</b></small>
-      <small class="text-muted row">In via <b>Poseidonia 26</b></small>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
-    </div>
-  </div>
-
-</div>
-
+<div id="eventiContainer" style="padding-top:20px;">
+ </div>
+ 
+ <div id="show_paginator" class="pull-right"></div>
+ 
 </section>
 
+<%@include file="jspIncluse/modalCancellazione.jsp" %>
+<%@include file="jspIncluse/modalFineOperazione.jsp" %>
+<footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 
+<script>
+	mostraPaginaEventi(1);
+</script>
 
-
-	<footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
+<script>
+		$(document).ready(function(){
+			inserisciPaginator();
+		});
+		
+</script>
 
 </body>
 </html>
