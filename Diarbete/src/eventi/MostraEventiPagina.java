@@ -11,7 +11,8 @@ import eccezioni.ParametroIllegaleException;
 
 @WebServlet("/MostraEventiPagina")
 public class MostraEventiPagina extends HttpServlet {
-
+	//Tipologie di ricerche
+	public static final String CERCAPERTITOLO="TITOLO", CERCAPERREGIONE="REGIONE", CERCAPERPROVINCIA="PROVINCIA", CERCAPERCOMUNE="COMUNE";
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -23,7 +24,7 @@ public class MostraEventiPagina extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		try {
-			map = new EventoDAO().ottieni6Eventi(Integer.parseInt(req.getParameter("paginaDaMostrare"))-1, req.getParameter("stringaCercata"), null);
+			map = new EventoDAO().ottieni6Eventi(Integer.parseInt(req.getParameter("paginaDaMostrare"))-1, req.getParameter("stringaDaCercare"), req.getParameter("tipologiaRicerca"));
 		} catch (ParametroIllegaleException e) {
 			map.put("numeroEventiTotali", new Integer(0));
 			map.put("eventiDaMostrare", null);

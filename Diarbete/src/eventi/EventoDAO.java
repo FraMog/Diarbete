@@ -186,8 +186,20 @@ public class EventoDAO {
 		try{
 		conn = DBManager.getInstance().getConnection();
 		String query = "SELECT sql_calc_found_rows regione, dataInserimento, dataEvento, provincia, comune, indirizzo, descrizione, src, titolo, dottorePubblicante " +
-				"from evento " +
-				"order by dataInserimento desc " +
+				"from evento ";
+				if(tipologiaRicerca!=null){
+					System.out.println(tipologiaRicerca);
+					if(tipologiaRicerca.equals(MostraEventiPagina.CERCAPERTITOLO))
+						query += "where titolo LIKE '%" + stringaCercata + "%' ";
+					else if (tipologiaRicerca.equals(MostraEventiPagina.CERCAPERREGIONE))
+						query += "where regione LIKE '%" + stringaCercata + "%' ";
+					else if (tipologiaRicerca.equals(MostraEventiPagina.CERCAPERPROVINCIA))
+						query += "where provincia LIKE '%" + stringaCercata + "%' ";
+					else if (tipologiaRicerca.equals(MostraEventiPagina.CERCAPERCOMUNE))
+						query += "where comune LIKE '%" + stringaCercata + "%' ";
+					else throw new ParametroIllegaleException("La tipologia di ricerca non è in nessuno degli stati conosciuti!");
+				}
+				query+="order by dataInserimento desc " +
 				"LIMIT 6 offset " + 6*offset;
 		System.out.println(query);
 		s = conn.createStatement();

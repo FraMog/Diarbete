@@ -40,6 +40,7 @@
 		<article class="col-md-12 column">
           <ol class="breadcrumb">
   		<li><a href="forum.jsp">Forum</a></li>
+  		<li class="active">Risultati Ricerca</li>
   		<li class="active"><%=request.getParameter("titoloPostdaCercare") %></li>
 		</ol>
 		</article>
