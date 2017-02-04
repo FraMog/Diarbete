@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import forum.Risposta;
 import databaseconnection.DBManager;
 import eccezioni.ParametroIllegaleException;
 import utenti.TipologieUtenti;
