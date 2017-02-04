@@ -47,12 +47,87 @@
 		</article>
 </article>
 
+ <div class="container" id="containerRicerca" style="border: 1px solid #ccc;">
+ <div class="col-xs-12 col-sm-6" style="border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+    <h4 style="padding-top:20px;" class ="col-xs-12 col-sm-6">Cerca per titolo evento</h4>
+    <form action="ricercaEvento.jsp" method="post" id="formRicercaEventoPerTitolo">
+ 	<div class="col-xs-12 col-sm-6" style="padding-top:20px;">
+					<div id="custom-search-input">
+						<div class="input-group col-xs-12" style="height: 10px;" >
+							<input type="text" name="titoloEventoDaCercare" id="titoloEventoDaCercare" class="form-control input-xs-12"
+								placeholder="Inserisci titolo qui" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button" onclick="document.getElementById('formRicercaEventoPerTitolo').submit()">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						
+						</div>
+					</div>
+				</div>
+	 </form>		
+ </div>
+ <div class="col-xs-12 col-sm-6" style="border-bottom: 1px solid #ccc;">
+    <h4 style="padding-top:20px;" class ="col-xs-12 col-sm-6">Cerca evento per regione</h4>
+    <form action="ricercaEvento.jsp" method="post" id="formRicercaEventoPerRegione">
+ 	<div class="col-xs-12 col-sm-6" style="padding-top:20px;">
+					<div id="custom-search-input">
+						<div class="input-group col-xs-12" style="height: 10px;">
+							<input type="text" name="regioneEventoDaCercare" id="regioneEventoDaCercare" class="form-control input-xs-12"
+								placeholder="Inserisci la regione qui" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button" onclick="document.getElementById('formRicercaEventoPerRegione').submit()">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						
+						</div>
+					</div>
+				</div>
+	 </form>		
+ </div>
+ <div class="col-xs-12 col-sm-6" style="border-right: 1px solid #ccc;">
+    <h4 style="padding-top:20px;" class ="col-xs-12 col-sm-6">Cerca evento per provincia</h4>
+    <form action="ricercaEvento.jsp" method="post" id="formRicercaEventoPerProvincia">
+ 	<div class="col-xs-12 col-sm-6" style="padding-top:20px;">
+					<div id="custom-search-input">
+						<div class="input-group col-xs-12" style="height: 10px;">
+							<input type="text" name="provinciaEventoDaCercare" id="provinciaEventoDaCercare" class="form-control input-xs-12"
+								placeholder="Inserisci la provincia qui" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button" onclick="document.getElementById('formRicercaEventoPerProvincia').submit()">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						
+						</div>
+					</div>
+				</div>
+	 </form>		
+ </div>
+  <div class="col-xs-12 col-sm-6">
+    <h4 style="padding-top:20px;" class ="col-xs-12 col-sm-6">Cerca evento per comune</h4>
+    <form action="ricercaEvento.jsp" method="post" id="formRicercaEventoPerComune">
+ 	<div class="col-xs-12 col-sm-6" style="padding-top:20px;">
+					<div id="custom-search-input">
+						<div class="input-group col-xs-12" style="height: 10px;">
+							<input type="text" name="comuneEventoDaCercare" id="comuneEventoDaCercare" class="form-control input-xs-12"
+								placeholder="Inserisci il comune qui" /> <span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button" onclick="document.getElementById('formRicercaEventoPerComune').submit()">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						
+						</div>
+					</div>
+				</div>
+	 </form>		
+ </div>
+ </div>
 
+<div class="row"></div>
 <div class="text-center">
- <a href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>
+ <a style="margin-top:20px;" href="inserisciNuovoEvento.jsp" class="btn btn-primary">Pubblica nuovo evento</a>
 </div>
 
-<div id="eventiContainer" style="padding-top:20px;">
+<div id="eventiContainer" style="margin-top:20px;">
  </div>
  
  <div id="show_paginator" class="pull-right"></div>
