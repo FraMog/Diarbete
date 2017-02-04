@@ -27,7 +27,6 @@ public class EventoDAO {
 		ps.setString(5, evento.getComune());
 		ps.setString(6, evento.getIndirizzo());
 		ps.setString(7, evento.getDescrizione());
-		System.out.println(evento.getSrcEvento());
 		ps.setString(8, evento.getSrcEvento());
 		ps.setString(9, evento.getTitolo());
 		ps.setString(10, evento.getPubblicatoreEvento());
@@ -111,15 +110,14 @@ public class EventoDAO {
 				ps = conn.prepareStatement(query); 
 				ps.setString(1, eventoDaMostrare.getTitolo());
 				ps.setTimestamp(2, eventoDaMostrare.getDataPubblicazioneEvento());
-				 System.out.println(ps);
 				ResultSet resultSet= ps.executeQuery();
 				if(!resultSet.next()){
 					return null;
 				}
 				
 				Evento eventoDettagliato= new Evento(resultSet.getString(9), resultSet.getString(7), resultSet.getString(1), resultSet.getString(4), resultSet.getString(5), resultSet.getString(6), resultSet.getTimestamp(3), resultSet.getTimestamp(2), resultSet.getString(10), resultSet.getString(8));
-				
-			return eventoDettagliato;
+				System.out.println(resultSet.getString(7).replace("\n", "<br \\>"));
+				return eventoDettagliato;
 		} catch (SQLException e){
 			e.printStackTrace();
 			return null;
