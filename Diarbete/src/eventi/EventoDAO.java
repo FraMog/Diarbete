@@ -141,6 +141,39 @@ public class EventoDAO {
 		
 	}
 
+	public String getSrcImmagine(Evento eventoDaCancellare){
+		Connection conn = null;
+		PreparedStatement ps = null;
+		try{
+		conn = DBManager.getInstance().getConnection();
+		String query = "SELECT src FROM evento WHERE titolo = ? AND dataInserimento = ?";
+		ps = conn.prepareStatement(query);
+		ps.setString(1, eventoDaCancellare.getTitolo());
+		ps.setTimestamp(2, eventoDaCancellare.getDataPubblicazioneEvento());
+		ResultSet rs= ps.executeQuery();
+		if(!rs.next())return null;
+		System.out.println(rs.getString(1));
+		return rs.getString(1);
+				
+		} catch (SQLException e){
+			e.printStackTrace();
+			return null;
+		}
+		 finally{
+				if(ps!=null)
+					try {
+						ps.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				if(conn!=null)
+					try {
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+			}
+	}
 
 	public boolean cancellaEvento(Evento eventoDaCancellare) {
 		Connection conn = null;
