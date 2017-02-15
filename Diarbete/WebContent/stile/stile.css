@@ -1,3 +1,5 @@
+
+
 body {
 	word-wrap: break-word;
 }
@@ -41,7 +43,7 @@ div#logoContainer {
 
 
 
-.glyphicon-log-in {
+.wrapLogin {
 	font-size:35px;
 	position: absolute;
 	top:10px;
