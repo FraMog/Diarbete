@@ -1,6 +1,11 @@
 body {
 	word-wrap: break-word;
 }
+
+header{
+	padding-bottom: 10px;
+}
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
@@ -31,7 +36,7 @@ footer{
 }
 
 div#logoContainer {
-	padding-top: 30px;
+	padding-top: 25px;
 }
 
 
@@ -92,6 +97,10 @@ div#logoContainer {
     font-size: 23px;
 }
 
+footer
+{
+	margin-top:40px;
+}
 
 /* Fine cerca farmacia */
 
