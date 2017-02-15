@@ -22,7 +22,16 @@
 		<div class="collapse navbar-collapse  navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
 				<li id="homeMenuNavigazionale" class="active"><a href="home.jsp">Home</a></li>
-				<li id="consigliMenuNavigazionale"><a>Consigli</a></li> 
+				<!-- <li id="consigliMenuNavigazionale"><a>Consigli</a></li>  --> 
+				<li id="consigliMenuNavigazionale" class="dropdown">
+			        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consigli
+			        	<span class="caret"></span>
+			        </a>
+			        <ul class="dropdown-menu">
+			          <li><a href="ricette.jsp">Ricette</a></li>
+			          <li><a href="#">Alimentazione</a></li>
+			        </ul>
+			     </li>
 				<li id="eventiMenuNavigazionale"><a href="eventi.jsp">Eventi</a></li>
 				<li id="forumMenuNavigazionale"><a href="forum.jsp">Forum</a></li>
 				<li id="contattiMenuNavigazionale"><a href="#">Contatti</a></li>
