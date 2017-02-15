@@ -75,7 +75,8 @@
 
 </script>
 
-
+<div style="clear:both;margin-top:73px">
+</div>
 	<footer class="row"><%@ include file="jspIncluse/footer.jsp" %></footer>
 
 </body>
