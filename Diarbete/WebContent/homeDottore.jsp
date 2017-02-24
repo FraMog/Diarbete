@@ -13,19 +13,13 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Home Page</title>
-
 </head>
 
 <body>
 
 	<header>
-		<%@include file="jspIncluse/header.jsp"%>
+		<%@include file="jspIncluse/headerDottore.jsp"%>
 	</header>
-
-	<%@include file="jspIncluse/menuNavigazionale.jsp"%>
-
-
-
 
 	<section class="row">
 	<div class="card-group" style="margin-top:100px">
@@ -57,6 +51,11 @@
 
 
 	<footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
+
+
+<script>
+document.getElementById('benvenuto').innerHTML = "Benvenuto Dott. " + localStorage.nome + " " + localStorage.cognome; 
+</script>
 
 </body>
 </html>

@@ -14,6 +14,21 @@
 <link rel="stylesheet" href="stile/stile.css">
 <title>Registrazione</title>
 
+<script>
+	
+	function go()
+	{
+		var nome = document.getElementById("inputNome").value;
+		var cognome = document.getElementById("inputCognome").value;
+		
+		localStorage.nome = nome;
+		localStorage.cognome = cognome;
+		
+		open("homeDottore.jsp", "_self");
+	}
+	
+</script>
+
 </head>
 
 <body>
@@ -187,7 +202,7 @@
 
 
 					</div>
-					<input type="submit" class="btn btn-primary col-sm-4 col-sm-offset-4" value="Registrati" style="margin-top:10px"/>
+					<input type="button" onclick="go()" class="btn btn-primary col-sm-4 col-sm-offset-4" value="Registrati" style="margin-top:10px"/>
 			</form>
 		</div>
 
