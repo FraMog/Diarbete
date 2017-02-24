@@ -29,7 +29,7 @@
 			        </a>
 			        <ul class="dropdown-menu">
 			          <li><a href="ricette.jsp">Ricette</a></li>
-			          <li><a href="#">Alimentazione</a></li>
+			          <li><a href="alimentazione.jsp">Alimentazione</a></li>
 			        </ul>
 			     </li>
 				<li id="eventiMenuNavigazionale"><a href="eventi.jsp">Eventi</a></li>
