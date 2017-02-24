@@ -13,7 +13,7 @@
     <header>
         <%@ include file="../jspIncluse/headerCartelle.jsp" %>
     </header>
-    <%@ include file="../jspIncluse/menuNavigazionale.jsp" %>
+    <%@ include file="../jspIncluse/menuNavigazionaleCartelle.jsp" %>
       
         <section id="paginaRicette" class="container-fluid">
             <div class="row">
