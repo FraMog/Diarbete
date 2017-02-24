@@ -29,51 +29,43 @@
 <section class="row">
 
 <div class="card-group">
-  <div class="card col-xs-12 col-sm-4">
-    <img class="card-img-top center-block" src="img/logo.png" alt="Card image cap">
+
+<div class="card col-xs-12 col-sm-4">
+    <img class="card-img-top center-block img-responsive" src="img/home/consigli.png" alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title">Titolo ultimo consiglio</h4>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h4 class="card-title">Alimentazione per il diabetico</h4>
+      <p class="card-text">
+      
+Una alimentazione ben bilanciata rappresenta la cura essenziale del diabete. Seguire una dieta controllata e sana serve soprattutto a mantenere sotto controllo il livello di zucchero nel sangue, mediante un corretto apporto alimentare di tutti i nutrienti necessari alla salute dell'organismo. 
+      </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
+    </div>
+  </div><div class="card col-xs-12 col-sm-4">
+    <img class="card-img-top center-block img-responsive" src="img/home/evento.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Occhio al diabete</h4>
+      <p class="card-text">
+      Circolo della Stampa - Milano. A che punto siamo sull'assistenza alla persona con Diabete in Lombardia. Farmaci dal nome generico e biosimilari: benefici e  rischi per il diabetico. 
+      </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
+    </div>
+  </div><div class="card col-xs-12 col-sm-4">
+    <img class="card-img-top center-block img-responsive" src="img/home/ricette.png" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Involtini di pollo e zucchine al profumo di menta</h4>
+      <p class="card-text">
+      
+I fagiolini verdi sono una varieta' di fagiolo (Phaseolus vulgaris) in cui tutto il frutto (sia i fagioli sia il baccello che li contiene) viene consumato.   
+      </p>
     </div>
     <div class="card-footer">
       <small class="text-muted">Pubblicato il 29-01-2017 alle ore 12:25</small>
     </div>
   </div>
-  <div class="card col-xs-12 col-sm-4" id="ultimoEventoInserito">
-    
-  </div>
-  <div class="card col-xs-12 col-sm-4" id="ultimaRispostaPost">
-
-  </div>
-</div>
-
-</section>
-
-<%--Carico al momento del caricamento della pagina l'ultimo post risposto nel forum --%>
-<script>
-
-	$.ajax({type:"POST",
-		url: "MostraUltimoTopicRisposto",
-		success: function(risposta){ //se la richiesta ha successo
-			$('#ultimaRispostaPost').html(risposta);
-		},
-		error: function (response) { //se la richiesta fallisce
-			$('#ultimaRispostaPost').html(risposta);
-	    }
-	});
-	
-	$.ajax({type:"POST",
-		url: "MostraUltimoEventoInserito",
-		success: function(risposta){ //se la richiesta ha successo
-			$('#ultimoEventoInserito').html(risposta);
-		},
-		error: function (response) { //se la richiesta fallisce
-			$('#ultimoEventoInserito').html(risposta);
-	    }
-	});
-
-
-</script>
 
 <div style="clear:both;margin-top:73px">
 </div>

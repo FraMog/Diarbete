@@ -47,7 +47,7 @@ function lancia(){
 			</div>
 
 
-			<input type="submit" class="btn btn-primary" value="Login" />
+			<a href="#"><input type="button" class="btn btn-primary" value="Login" /></a>
 		</form>
 	</div>
 
