@@ -17,8 +17,9 @@
         <div class="card-group">
             <div class="card col-xs-12 col-sm-4">
                 <img class="card-img-top center-block img-responsive" src="img/home/consigli.png" alt="Card image cap">
+                <hr />
                 <div class="card-block">
-                    <h4 class="card-title">Alimentazionè per il diabetico</h4>
+                    <h4 class="card-title">Alimentazione per il diabetico</h4>
                     <p class="card-text" style="text-align: justify">Una alimentazione ben bilanciata rappresenta la cura essenziale del diabete. Seguire una dieta controllata e sana serve soprattutto a mantenere sotto controllo il livello di zucchero nel sangue, mediante un corretto apporto alimentare di tutti i nutrienti necessari alla salute dell'organismo.</p>
                 </div>
                 <div class="card-footer">
@@ -27,6 +28,7 @@
             </div>
             <div class="card col-xs-12 col-sm-4">
                 <img class="card-img-top center-block img-responsive" src="img/home/evento.png" alt="Card image cap">
+                <hr />
                 <div class="card-block">
                     <h4 class="card-title">Occhio al diabete</h4>
                     <p class="card-text" style="text-align: justify">Circolo della Stampa - Milano. A che punto siamo sull'assistenza alla persona con Diabete in Lombardia. Farmaci dal nome generico e biosimilari: benefici e rischi per il diabetico.</p>
@@ -37,6 +39,7 @@
             </div>
             <div class="card col-xs-12 col-sm-4">
                 <img class="card-img-top center-block img-responsive" src="img/home/ricette.png" alt="Card image cap">
+                <hr />
                 <div class="card-block">
                     <h4 class="card-title">Involtini di pollo e zucchine al profumo di menta</h4>
                     <p class="card-text" style="text-align: justify">I fagiolini verdi sono una varieta' di fagiolo (Phaseolus vulgaris) in cui tutto il frutto (sia i fagioli sia il baccello che li contiene) viene consumato.</p>

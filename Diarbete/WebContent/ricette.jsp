@@ -8,6 +8,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stile/stile.css">
     <title>Ricette</title>
+    
+    <script>
+    
+    function goTo(x)
+    {
+    	localStorage.header1 = x.innerHTML;
+    	localStorage.paragrafo = x.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML;
+    	open("ricette/r1.jsp", "_self");
+    }
+    
+    </script>
+    
 </head>
 <body>
     <header>
@@ -30,7 +42,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12"><a href="./ricette/r1.jsp"><h1>Involtini di pollo e zucchine al profumo di menta</h1></a>
+                <div class="col-md-12"><a href="#"><h1 onclick="goTo(this)">Involtini di pollo e zucchine al profumo di menta</h1></a>
                     <br />
                     <p>Ingredienti: 8 fettine di pollo sottili (800 gr circa), 4 zucchine sottili + 6 normali (500 gr circa), 1 spicchio d'aglio, Parmigiano grattugiato, Olio di semi, Olio extra vergine, Sale, Pepe. Procedimento: Lavare accuratamente 4 zucchine e dividerle a meta' in senso orizzontale. Stendere le fettine su un tagliere, aggiungere parmigiano, sale, pepe ed arrotolare la fettina sulla meta' della zucchina, chiudendo ogni involtino con uno stuzzicadenti. Successivamente tagliare a cubetti le zucchine rimanenti e sminuzzare la menta. Versare mezzo bicchiere d'acqua in una padella ampia ed aggiungere le zucchine unite alla menta e ad uno spicchio d'aglio intero. Salare a piacere e far cuocere a fuoco basso per circa 5/10 minuti facendo attenzione a coprire la padella con un coperchio. Una volta che l'acqua sara' evaporata aggiungere gli involtini ed un cucchiaino di olio di semi e procedere con la cottura (sempre a fuoco lento) coprendo con il coperchio. Girare gli involtini di tanto in tanto per garantire una migliore cottura della carne.</p>
                 </div>
