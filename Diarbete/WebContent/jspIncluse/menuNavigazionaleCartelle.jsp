@@ -34,7 +34,7 @@
 			     </li>
 				<li id="eventiMenuNavigazionale"><a href="../eventi.jsp">Eventi</a></li>
 				<li id="forumMenuNavigazionale"><a href="../forum.jsp">Forum</a></li>
-				<li id="contattiMenuNavigazionale"><a href="#">Contatti</a></li>
+				<li id="contattiMenuNavigazionale"><a href="../contatti.jsp">Contatti</a></li>
 			</ul>
 		</div>
 	</nav>
