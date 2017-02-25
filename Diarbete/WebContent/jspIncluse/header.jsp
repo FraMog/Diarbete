@@ -10,24 +10,41 @@
 </div>
 <!-- Registrati -->
 <div class="wrapRegistrati" class="dropdown-toggle" data-toggle="dropdown">
-    <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" style="background-color: white; color: black">Registrati<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" style="background-color: white; color: black">Registrati <span class="caret"></span></a>
     <div class="dropdown-menu" style="padding: 10px; margin-left: -100px">
         <input type="submit" onclick="window.open('registrazioneDottore.jsp','_self')" class="btn btn-primary" value="Dottore" /> <input type="submit" onclick="window.open('registrazionePaziente.jsp','_self')" class="btn btn-primary" value="Paziente" />
     </div>
 </div>
 <!-- Login -->
-<div class="wrapLogin" class="dropdown-toggle" data-toggle="dropdown">
-    <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown" style="background-color: white; color: black">Login<span class="caret"></span></a>
-    <div class="dropdown-menu" style="padding: 10px; margin-left: -100px">
-        <form class="form">
-            <div class="form-group">
-                <input name="username" type="text" class="form-control" placeholder="e-mail" autofocus required="required">
+<div class="wrapLogin" class="dropdown-toggle" data-toggle="modal" data-target="#myModal">
+    <a href="#" class="dropdown-toggle btn btn-primary" style="background-color: white; color: black">Login</a>
+</div>
+<!-- LOGIN Trigger the modal with a button 
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login</h4>
             </div>
-            <div class="form-group">
-                <input name="password" type="password" class="form-control" placeholder="password" required="required"><br>
+            <div class="modal-body">
+                <form class="form">
+                    <div class="form-group">
+                        <input name="username" type="text" class="form-control" placeholder="e-mail" autofocus required="required">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" class="form-control" placeholder="password" required="required"><br>
+                    </div>
+                </form>
             </div>
-            <a href="#"><input type="button" class="btn btn-primary" value="Login" /></a>
-        </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Cerca farmacia -->
