@@ -13,22 +13,17 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Registrazione</title>
-
 <script>
-	
-	function go()
-	{
+	function go() {
 		var nome = document.getElementById("inputNome").value;
 		var cognome = document.getElementById("inputCognome").value;
-		
+
 		localStorage.nome = nome;
 		localStorage.cognome = cognome;
-		
+
 		open("homeDottore.jsp", "_self");
 	}
-	
 </script>
-
 </head>
 
 <body>
@@ -38,9 +33,6 @@
 	</header>
 
 	<%@include file="jspIncluse/menuNavigazionale.jsp"%>
-
-
-
 
 	<section class="row">
 		<div class="col-sm-4 col-sm-offset-4">
