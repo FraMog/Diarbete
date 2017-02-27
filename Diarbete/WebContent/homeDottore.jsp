@@ -9,7 +9,7 @@
 <title>Home Page</title>
 </head>
 <body>
-    <header>
+    <header class="row">
         <%@include file="jspIncluse/headerDottore.jsp"%>
     </header>
     <section class="row">
@@ -36,7 +36,7 @@
     </section>
     <footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
     <script>
-					document.getElementById('benvenuto').innerHTML = "Benvenuto Dott. "
+					document.getElementById('benvenuto').innerHTML = "Dott. "
 							+ localStorage.nome + " " + localStorage.cognome;
 				</script>
 </body>

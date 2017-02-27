@@ -11,8 +11,7 @@
             <div class="dropdown-toggle wrapLogin" data-toggle="modal" data-target="#myModal">
                 <a href="#" class="dropdown-toggle btn btn-primary" style="background-color: white; color: black">Login</a>
             </div>
-            <!-- LOGIN Trigger the modal with a button 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+            <!-- LOGIN Trigger the modal with a button -->
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -39,8 +38,8 @@
                     </div>
                 </div>
             </div>
-            <!--  REGISTRATI  -->            
-            <div class="dropdown wrapRegistrati" style="margin-right: 4px" >
+            <!--  REGISTRATI  -->
+            <div class="dropdown wrapRegistrati" style="margin-right: 4px">
                 <button class="btn btn-primary dropdown-toggle" style="background-color: white; color: black" type="button" data-toggle="dropdown">
                     Registrati <span class="caret"></span>
                 </button>
@@ -55,7 +54,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="logoContainer">
-                <img src="img/logo.png">
+                <img src="img/logo.png" />
             </div>
         </div>
     </div>
