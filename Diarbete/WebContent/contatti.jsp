@@ -27,7 +27,7 @@
         <div class="col-md-12" style="text-align: center; width:100%">
             <fieldset id="contatti">
                 <legend>CONTATTI</legend>
-                <span>Per informazioni aggiuntive o chiarimenti conttatare questo indirizzo: <a href="mailto:diarbeteunisa@gmail.com">diarbeteunisa@gmail.com</a></span>
+                <span>Per informazioni aggiuntive o chiarimenti contattare questo indirizzo: <a href="mailto:diarbeteunisa@gmail.com">diarbeteunisa@gmail.com</a></span>
             </fieldset>
         </div>
     </section>
