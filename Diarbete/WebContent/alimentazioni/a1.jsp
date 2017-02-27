@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <%@ include file="../jspIncluse/headerCartelle.jsp"%>
+        <%@ include file="../jspIncluse/header.jsp"%>
     </header>
     <%@ include file="../jspIncluse/menuNavigazionaleCartelle.jsp"%>
     <section id="paginaRicette" class="container-fluid">

@@ -36,11 +36,24 @@
     <div style="clear: both; margin-top: 73px"></div>
     <footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
     <script>
+    
+    var farma_qui = localStorage.getItem("farmacia_qui");
+    var sei_qui = localStorage.getItem("sei_qui");
+    if (sei_qui=="si")
+    {
+    	document.getElementById("nomeFarmacia").innerHTML = "Farmacie nei dintorni di "
+			+ farma_qui;
+		document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDoSwVvCAM_pT2dLFIRtLolHOy59ouWjCk&q=farmacia+vicina+"
+			+ farma_qui;
+    }
+    else
+    {
 					var luogo = localStorage.getItem("farmacia");
 					document.getElementById("nomeFarmacia").innerHTML = "Farmacie nei dintorni di "
 							+ luogo;
 					document.getElementById('iframe').src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDoSwVvCAM_pT2dLFIRtLolHOy59ouWjCk&q=farmacia+vicina+"
 							+ luogo;
+    }
 				</script>
 </body>
 </html>

@@ -1,9 +1,16 @@
 <script>
 	function lancia() {
 		localStorage.farmacia = document.getElementById('farmacia').value;
+		localStorage.sei_qui = "no";
 		open("farmacia.jsp", "_self");
 	}
 
+	function lanciaQui() {
+		localStorage.farmacia_qui = "Fisciano";
+		localStorage.sei_qui = "si";
+		open("farmacia.jsp", "_self");
+	}
+	
 	function login() {
 		var user = document.getElementById("user").value;
 		var psw = document.getElementById("psw").value;
@@ -85,6 +92,8 @@
             <div id="custom-search-input">
                 <div class="input-group col-md-12 in-sm" style="height: 10px;">
                     <input type="text" id="farmacia" class="form-control input-sm" placeholder="Cerca farmacia" /> <span class="input-group-btn">
+                       <button class="btn btn-info btn-lg" type="submit" onclick="lanciaQui()">
+                            <i class="glyphicon glyphicon-map-marker"></i>
                         <button class="btn btn-info btn-lg" type="submit" onclick="lancia()">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
