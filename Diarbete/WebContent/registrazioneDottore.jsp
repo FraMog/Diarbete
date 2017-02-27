@@ -5,19 +5,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascript/reg/registrazione.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Registrazione</title>
-<script>
-	function go() {
-		var nome = document.getElementById("inputNome").value;
-		var cognome = document.getElementById("inputCognome").value;
 
-		localStorage.nome = nome;
-		localStorage.cognome = cognome;
-
-		open("homeDottore.jsp", "_self");
-	}
-</script>
 </head>
 <body>
     <header>
@@ -108,7 +99,7 @@
                     </div>
                 </div>
                 <div style="text-align: center;">
-                    <input type="button" onclick="go()" class="btn btn-primary" value="Registrati" style="margin-top: 10px;" />
+                    <input type="button" onclick="javascript:inserisciDottore()" class="btn btn-primary" value="Registrati" style="margin-top: 10px;" />
                 </div>
             </form>
         </div>

@@ -11,6 +11,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascript/reg/registrazione.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Registrazione</title>
 
@@ -173,7 +174,7 @@
 
 
 					</div>
-					<input type="submit" class="btn btn-primary col-sm-4 col-md-offset-4" value="Registrati" style="margin-top:10px"/>
+					<input type="button" onclick="javascript:inserisciPaziente()" class="btn btn-primary col-sm-4 col-md-offset-4" value="Registrati" style="margin-top:10px"/>
 			</form>
 		</div>
 
