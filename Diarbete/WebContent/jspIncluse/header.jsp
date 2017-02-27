@@ -3,6 +3,27 @@
 		localStorage.farmacia = document.getElementById('farmacia').value;
 		open("farmacia.jsp", "_self");
 	}
+
+	function login() {
+		var user = document.getElementById("user").value;
+		var psw = document.getElementById("psw").value;
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var controllo = getResponseHeader("controllo");
+				if (controllo == "ok") {
+					location.reload();
+				} else {
+					alert("ERRORE LOGIN");
+				}
+			}
+		};
+		xhttp.open("POST", "/ServletLogin", true);
+		xhttp.setRequestHeader("user", user);
+		xhttp.setRequestHeader("psw", psw);
+		xhttp.send();
+	}
 </script>
 <div class="container-fluid">
     <div class="row">
@@ -24,15 +45,15 @@
                         <div class="modal-body">
                             <form class="form">
                                 <div class="form-group">
-                                    <input name="username" type="text" class="form-control" placeholder="e-mail" autofocus required="required">
+                                    <input id="user" name="username" type="text" class="form-control" placeholder="e-mail" autofocus required="required">
                                 </div>
                                 <div class="form-group">
-                                    <input name="password" type="password" class="form-control" placeholder="password" required="required"><br>
+                                    <input id="psw" name="password" type="password" class="form-control" placeholder="password" required="required"><br>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="login()">Login</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>

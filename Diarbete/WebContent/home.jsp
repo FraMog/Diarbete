@@ -18,6 +18,12 @@
         	} else {
         %>
         <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <script>
+                    document.getElementById('benvenuto').innerHTML = "Benvenuto "
+                            + localStorage.nomePaziente
+                            + " "
+                            + localStorage.cognomePaziente;
+                </script>
         <%
         	}
         %>
@@ -62,11 +68,5 @@
         </div>
     </section>
     <footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
-    <script>
-					document.getElementById('benvenuto').innerHTML = "Benvenuto "
-							+ localStorage.nomePaziente
-							+ " "
-							+ localStorage.cognomePaziente;
-				</script>
 </body>
 </html>
