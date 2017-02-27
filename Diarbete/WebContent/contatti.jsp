@@ -9,8 +9,18 @@
 <title>Contatti</title>
 </head>
 <body>
-    <header>
+    <header class="row">
+        <%
+        	if (session.getAttribute("paziente") == null) {
+        %>
         <%@include file="jspIncluse/header.jsp"%>
+        <%
+        	} else {
+        %>
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <%
+        	}
+        %>
     </header>
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
     <section class="row">

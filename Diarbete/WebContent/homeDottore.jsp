@@ -37,7 +37,7 @@
     <footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
     <script>
 					document.getElementById('benvenuto').innerHTML = "Dott. "
-							+ localStorage.nome + " " + localStorage.cognome;
+							+ localStorage.nomeDottore + " " + localStorage.cognomeDottore;
 				</script>
 </body>
 </html>

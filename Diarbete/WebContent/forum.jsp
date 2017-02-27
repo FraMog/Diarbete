@@ -16,7 +16,17 @@
 </head>
 <body>
     <header>
+        <%
+        	if (session.getAttribute("paziente") == null) {
+        %>
         <%@include file="jspIncluse/header.jsp"%>
+        <%
+        	} else {
+        %>
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <%
+        	}
+        %>
     </header>
     <script>
 					$(document).ready(function() {

@@ -23,8 +23,18 @@
 <body>
 
 	<header>
-		<%@include file="jspIncluse/header.jsp" %>
-	</header>
+        <%
+        	if (session.getAttribute("paziente") == null) {
+        %>
+        <%@include file="jspIncluse/header.jsp"%>
+        <%
+        	} else {
+        %>
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <%
+        	}
+        %>
+    </header>
 
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
 	

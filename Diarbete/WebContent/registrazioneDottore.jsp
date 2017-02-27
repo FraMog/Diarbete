@@ -21,7 +21,17 @@
 </head>
 <body>
     <header>
+        <%
+        	if (session.getAttribute("paziente") == null) {
+        %>
         <%@include file="jspIncluse/header.jsp"%>
+        <%
+        	} else {
+        %>
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <%
+        	}
+        %>
     </header>
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
     <section class="row">

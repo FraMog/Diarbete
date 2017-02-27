@@ -9,8 +9,18 @@
 <title>Home Page</title>
 </head>
 <body>
-    <header>
+    <header class="row">
+        <%
+        	if (session.getAttribute("paziente") == null) {
+        %>
         <%@include file="jspIncluse/header.jsp"%>
+        <%
+        	} else {
+        %>
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
+        <%
+        	}
+        %>
     </header>
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
     <section class="row">
@@ -52,5 +62,11 @@
         </div>
     </section>
     <footer class="row"><%@ include file="jspIncluse/footer.jsp"%></footer>
+    <script>
+					document.getElementById('benvenuto').innerHTML = "Benvenuto "
+							+ localStorage.nomePaziente
+							+ " "
+							+ localStorage.cognomePaziente;
+				</script>
 </body>
 </html>
