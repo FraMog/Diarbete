@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="registrazione.Paziente"%>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
@@ -25,19 +26,22 @@
         <div class="col-xs-8 col-xs-offset-4" style="margin-top:15px;">
         	<div class="prima_parte">
         		<div>
-        			<img style="height:126px" class="col-xs-3 img-responsive" id="imgPaziente" src="img/pazienti/paziente1.jpg" alt="img" title="img">
+        			<img style="height:126px" class="col-xs-3 img-responsive" id="imgPaziente" src="${paziente.src}" alt="img" title="img">
         		</div>
         		<div id="parte_destra">
-        			<p style="font-weight: bold; font-size:20px;">Nome Cognome</p>
-        			<p>Data</p>
-        			<p>Via</p>
-        			<p>Tipologia Diabete: A</p>
+        			<p style="font-weight: bold; font-size:20px;">${paziente.cognome} ${paziente.nome} </p>
+        			<p>${paziente.data}</p>
+        			<p>${paziente.indirizzo}</p>
+        			<p>Tipologia Diabete: <% if(((Paziente)session.getAttribute("paziente")).getTipoDiabete()==1)
+        				{
+        				%>A<%} else{ %>B<%	}
+        				%></p>
         		</div>
         	</div>
         </div>
-        <div class="col-xs-4 col-xs-offset-4" style=" border-radius: 10px; height:200px; margin-top:30px; border:1px solid black; padding: 10px;"> 
+        <div class="col-xs-4 col-xs-offset-4" style=" border-radius: 10px; height:auto; margin-top:30px; border:1px solid black; padding: 10px;"> 
         		<p style="font-size:16px;">Breve descrizione</p>
-        		<p>adfsfgdfbdfgdfgsfdgdfgdfgdfgdfgdf</p>
+        		<p>${paziente.descrizione}</p>
         </div>
             <div style="clear: both; margin-top: 73px"></div>
         

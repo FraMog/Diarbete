@@ -33,18 +33,18 @@
                 <div style="float: left; margin-left: 10px">
                     <!-- INSERIRE NOME DOTTORE -->
                     <div>
-                        <h4>Nome Cognome</h4>
+                        <h4>${dottore.nome} ${dottore.cognome}</h4>
                     </div>
                     <!-- INSERIRE SPECIALIZZAZIONE -->
                     <div>
                         <p>
-                            <b>Specializzazione:</b>
+                            <b>Specializzazione: ${dottore.specializzazione}</b>
                         </p>
                     </div>
                     <!-- INSERIRE AMBITO -->
                     <div>
                         <p>
-                            <b>Ambito:</b>
+                            <b>Ambito: ${dottore.ambito}</b>
                         </p>
                     </div>
                 </div>
@@ -52,16 +52,16 @@
             <!-- INSERIRE FRAME MAPPA  -->
             <div class="panel panel-info" style="float: left; height: 300px; width: 100%;">
                 <div class="panel-heading">
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Ospedale Sandro Pertini
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> ${dottore.indirizzo}
                 </div>
                 <div class="panel-body">
-                    <iframe width="100%" height="230px" frameborder="0" style="border: 0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDoSwVvCAM_pT2dLFIRtLolHOy59ouWjCk&q=Sandro+pertini+ospedale" allowfullscreen> </iframe>
+                    <iframe width="100%" height="230px" frameborder="0" style="border: 0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDoSwVvCAM_pT2dLFIRtLolHOy59ouWjCk&q=${dottore.indirizzo}" allowfullscreen> </iframe>
                 </div>
             </div>
             <!-- INSERIRE descrizione  -->
-            <div class="panel panel-info" style="float: left; height: 100px; width: 100%;">
+            <div class="panel panel-info" style="float: left; height: auto; width: 100%;">
                 <div class="panel-heading">Breve Descrizione Curriculum</div>
-                <div class="panel-body">Il dottore ha studiatoo---......................</div>
+                <div class="panel-body">${dottore.curriculum}</div>
             </div>
         </div>
     </section>
