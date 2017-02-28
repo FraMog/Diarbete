@@ -14,19 +14,18 @@
 	function login() {
 		var user = document.getElementById("user").value;
 		var psw = document.getElementById("psw").value;
-
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
-				var controllo = getResponseHeader("controllo");
+				var controllo = xhttp.getResponseHeader("controllo");
 				if (controllo == "ok") {
-					location.reload();
+					open("home.jsp","_self");
 				} else {
 					alert("ERRORE LOGIN");
 				}
 			}
 		};
-		xhttp.open("POST", "/ServletLogin", true);
+		xhttp.open("POST", "ServletLogin", true);
 		xhttp.setRequestHeader("user", user);
 		xhttp.setRequestHeader("psw", psw);
 
@@ -44,7 +43,7 @@
         <div class="col-md-12" style="padding: 0px">
             <!-- Login -->
             <div class="dropdown-toggle wrapLogin" data-toggle="modal" data-target="#myModal">
-                <a href="#" class="dropdown-toggle btn btn-primary" style="background-color: white; color: black">Login</a>
+                <a class="dropdown-toggle btn btn-primary" style="background-color: white; color: black">Login</a>
             </div>
             <!-- LOGIN Trigger the modal with a button -->
             <!-- Modal -->
@@ -57,7 +56,7 @@
                             <h4 class="modal-title">Login</h4>
                         </div>
                         <div class="modal-body">
-                            <form class="form">
+                           <form class="form">
                                 <div class="form-group">
                                     <input id="user" name="username" type="text" class="form-control" placeholder="e-mail" autofocus required="required">
                                 </div>
@@ -65,13 +64,13 @@
                                     <input id="psw" name="password" type="password" class="form-control" placeholder="password" required="required"><br>
                                 </div>
                                 <div class="form-group" style="text-align: left">
-                                    <label id="radioPaziente" class="radio-inline"><input type="radio" name="optradio">Paziente</label> <label id="radioDottore" class="radio-inline"><input type="radio" name="optradio">Dottore</label>
+                                    <label  class="radio-inline"><input id="radioPaziente" type="radio" name="optradio">Paziente</label> <label  class="radio-inline"><input id="radioDottore" type="radio" name="optradio">Dottore</label>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="login()">Login</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button  class="btn btn-success" data-dismiss="modal" onclick="javascript:login()">Login</button>
+                            <button  class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>

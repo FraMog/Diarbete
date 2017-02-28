@@ -8,7 +8,7 @@
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
-				open("../home.jsp", "_self");
+				open("home.jsp", "_self");
 			}
 		};
 		xhttp.open("POST", "ServletLogout", true);

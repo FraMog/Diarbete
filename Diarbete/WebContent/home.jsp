@@ -7,25 +7,39 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
+<%@ page import="registrazione.Dottore" %>
+<%@ page import="registrazione.Paziente" %>
 <title>Home Page</title>
 </head>
 <body>
     <header class="row">
         <%
-        	if (session.getAttribute("paziente") == null) {
+        	if (session.getAttribute("paziente") == null && session.getAttribute("dottore")==null) {
         %>
         <%@include file="jspIncluse/header.jsp"%>
         <%
         	} else {
+        		Paziente p=(Paziente) session.getAttribute("paziente");
+        		Dottore d= (Dottore)session.getAttribute("dottore");
+        		if(p!=null){
         %>
         <%@include file="jspIncluse/headerPaziente.jsp"%>
         <script>
-                    document.getElementById('benvenuto').innerHTML = "Benvenuto "
-                            + localStorage.nomePaziente
-                            + " "
-                            + localStorage.cognomePaziente;
+        document.getElementById('benvenuto').innerHTML = "Benvenuto "+ "<%= p.getNome()%>"+" "+ "<%= p.getCognome()%>";
                 </script>
+               
         <%
+        		 }
+        		else if(d!=null){
+        			 %>
+        		        <%@include file="jspIncluse/headerDottore.jsp"%>
+        		        <script>
+        		                    document.getElementById('benvenuto').innerHTML = "Benvenuto "+ "<%= d.getNome()%>"+" "+ "<%= d.getCognome()%>";
+        		                          
+        		                </script>
+        		               
+        		        <%
+        		}
         	}
         %>
     </header>
