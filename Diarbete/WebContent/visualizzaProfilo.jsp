@@ -60,7 +60,7 @@ function inviaEmail()
         			<p>Pranzo</p><input id="pranzo" type="text" style="margin-bottom:6px;"/>
         			<p>Pomeriggio</p><input id="pom" type="text" style="margin-bottom:6px;"/>
         			<p>Sera</p><input id="sera" type="text" style="margin-bottom:6px;"/>
-        			<p><button type="button" class="btn btn-primary" style="margin-top:10px;">Avanti</button><button type="button" class="btn btn-primary" style="margin-top:5px;">Modifica</button></p>
+        			<p><button type="button" class="btn btn-primary" style="margin-top:10px;">Avanti</button></p>
         		</div>
         	</div>
         	<div class="col-xs-7 col-xs-offset-1" style="margin-top:35px;">
