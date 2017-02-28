@@ -10,18 +10,8 @@
 <title>Profilo</title>
 </head>
 <body>
-    <header>
-        <%
-        	if (session.getAttribute("paziente") == null) {
-        %>
-        <%@include file="jspIncluse/header.jsp"%>
-        <%
-        	} else {
-        %>
-        <%@include file="jspIncluse/headerPaziente.jsp"%>
-        <%
-        	}
-        %>
+    <header class="row">
+        <%@include file="jspIncluse/headerDottore.jsp"%>
     </header>
     <section class="row">
         <div class="card col-xs-12" style="margin-top: 30px">

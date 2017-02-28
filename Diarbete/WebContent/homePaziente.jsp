@@ -18,8 +18,8 @@
 </style>
 </head>
 <body>
-    <header>
-        <%@include file="jspIncluse/header.jsp"%>
+    <header class="row">
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
     </header>
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
     <section class="row">

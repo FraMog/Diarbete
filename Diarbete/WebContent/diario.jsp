@@ -18,7 +18,6 @@ function indietro()
 	
 	http.onreadystatechange = function()
 	{
-		alert("ciao");
 		if(http.readyState==4 && http.status==200)
 		{
 			
@@ -35,7 +34,6 @@ function avanti()
 	
 	http.onreadystatechange = function()
 	{
-		alert("ciao");
 		if(http.readyState==4 && http.status==200)
 		{
 			location.reload();
@@ -59,8 +57,8 @@ else
 	int count=(int)session.getAttribute("count");
 %>
 
-    <header>
-        <%@include file="jspIncluse/header.jsp"%>
+    <header class="row">
+        <%@include file="jspIncluse/headerPaziente.jsp"%>
     </header>
     <%@include file="jspIncluse/menuNavigazionale.jsp"%>
     <section class="row">
