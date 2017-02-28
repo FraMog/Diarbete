@@ -16,7 +16,7 @@
 %>
 <div style="border: 1px solid #ccc;" id="containerItemElencoEventi" class="col-xs-12 col-sm-4">
     <div>
-        <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="cancellaEvento('<%=eventiDaMostrare.get(i).getTitolo()%>','<%=eventiDaMostrare.get(i).getDataPubblicazioneEvento().toString()%>')"> <i class="glyphicon glyphicon-remove pull-right" style="font-size: 25px;"></i></a> <img class="card-img-top center-block" src="img/eventi/<%=eventiDaMostrare.get(i).getSrcEvento()%>" alt="Card image cap">
+        <a class="col-xs-12" data-toggle="modal" href="#modalCancellazione" onclick="cancellaEvento('<%=eventiDaMostrare.get(i).getTitolo()%>','<%=eventiDaMostrare.get(i).getDataPubblicazioneEvento().toString()%>')"> <i class="glyphicon glyphicon-remove pull-right" style="font-size: 25px;"></i></a> <img class="card-img-top center-block" src="<%=eventiDaMostrare.get(i).getSrcEvento()%>" alt="Card image cap">
     </div>
     <div class="card-block">
         <h4 class="card-title center-block"><%=eventiDaMostrare.get(i).getTitolo()%></h4>

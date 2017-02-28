@@ -74,7 +74,7 @@
 		<%if (evento != null) {%>
 		<div id="containerHeaderEvento">
 			<img class="col-xs-12 col-sm-4 pull-right"
-				src="img/eventi/<%=evento.getSrcEvento()%>" alt="Card image cap">
+				src="<%=evento.getSrcEvento()%>" alt="Card image cap">
 			<div id="infoEventoPrincipali"
 				class="col-xs-12 col-sm-7">
 				<h1>
