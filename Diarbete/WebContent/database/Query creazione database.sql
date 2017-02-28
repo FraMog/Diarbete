@@ -93,7 +93,9 @@ CREATE TABLE if not exists diarbete.`ricetta` (
 CREATE TABLE if not exists diarbete.`valoreglicemico` (
   `pazienteDiAppartenenza` varchar(100) NOT NULL,
   `giorno` date NOT NULL,
-  `valore` int(11) NOT NULL,
+  `mattina` int ,
+  `pomeriggio` int,
+  `sera` int,
   PRIMARY KEY (`pazienteDiAppartenenza`,`giorno`),
   FOREIGN KEY (`pazientediappartenenza`) REFERENCES `paziente` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
 );
