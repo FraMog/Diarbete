@@ -2,11 +2,12 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+<link rel="shortcut icon" href="img/favicon.ico">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
-<title>Home Page</title>
+<title>Home Dottore</title>
 </head>
 <body>
     <header class="row">
@@ -23,13 +24,13 @@
             <div class="card col-xs-12 col-sm-4">
                 <a href="#"> <img class="card-img-top center-block img-thumbnail" src="img/homedottore/pazienti.jpg" alt="pazienti"></a>
                 <h4 class="card-title">
-                    <a href="#">PAZIENTI</a>
+                    <a href="cercaPaziente.jsp">PAZIENTI</a>
                 </h4>
             </div>
             <div class="card col-xs-12 col-sm-4">
                 <a href="#"> <img class="card-img-top center-block img-thumbnail" src="img/homedottore/forum.jpg" alt="forum"></a>
                 <h4 class="card-title">
-                    <a href="#">FORUM</a>
+                    <a href="forum.jsp">FORUM</a>
                 </h4>
             </div>
         </div>

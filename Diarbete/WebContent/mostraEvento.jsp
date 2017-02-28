@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1"/>
-
+<link rel="shortcut icon" href="img/favicon.ico">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script
