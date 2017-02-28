@@ -10,7 +10,7 @@
 		localStorage.sei_qui = "si";
 		open("farmacia.jsp", "_self");
 	}
-	
+
 	function login() {
 		var user = document.getElementById("user").value;
 		var psw = document.getElementById("psw").value;
@@ -29,7 +29,14 @@
 		xhttp.open("POST", "/ServletLogin", true);
 		xhttp.setRequestHeader("user", user);
 		xhttp.setRequestHeader("psw", psw);
-		xhttp.send();
+
+		if (document.getElementById("radioPaziente").checked == true) {
+			xhttp.setRequestHeader("tipo", "paziente");
+			xhttp.send();
+		} else if (document.getElementById("radioDottore").checked == true) {
+			xhttp.setRequestHeader("tipo", "dottore");
+			xhttp.send();
+		}
 	}
 </script>
 <div class="container-fluid">
@@ -56,6 +63,9 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="psw" name="password" type="password" class="form-control" placeholder="password" required="required"><br>
+                                </div>
+                                <div class="form-group" style="text-align: left">
+                                    <label id="radioPaziente" class="radio-inline"><input type="radio" name="optradio">Paziente</label> <label id="radioDottore" class="radio-inline"><input type="radio" name="optradio">Dottore</label>
                                 </div>
                             </form>
                         </div>
@@ -92,11 +102,11 @@
             <div id="custom-search-input">
                 <div class="input-group col-md-12 in-sm" style="height: 10px;">
                     <input type="text" id="farmacia" class="form-control input-sm" placeholder="Cerca farmacia" /> <span class="input-group-btn">
-                       <button class="btn btn-info btn-lg" type="submit" onclick="lanciaQui()">
+                        <button class="btn btn-info btn-lg" type="submit" onclick="lanciaQui()">
                             <i class="glyphicon glyphicon-map-marker"></i>
-                        <button class="btn btn-info btn-lg" type="submit" onclick="lancia()">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
+                            <button class="btn btn-info btn-lg" type="submit" onclick="lancia()">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
                     </span>
                 </div>
             </div>
