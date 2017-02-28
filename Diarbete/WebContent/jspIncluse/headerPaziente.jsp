@@ -3,6 +3,17 @@
 		localStorage.farmacia = document.getElementById('farmacia').value;
 		open("farmacia.jsp", "_self");
 	}
+	
+	function logout() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				open("home.jsp", "_self");
+			}
+		};
+		xhttp.open("POST", "ServletLogout", true);
+		xhttp.send();
+	}
 </script>
 <div class="col-md-4"></div>
 <!-- L'header contiene il logo, il form di ricerca delle farmacie, e l'icona del login -->
@@ -14,7 +25,7 @@
         <img class="col-xs-3 img-responsive" src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png" width="40px" height="40px" />   
         <img class="col-xs-3 img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> 
         <img class="col-xs-3 img-responsive" src="http://www.freeiconspng.com/uploads/message-icon-png-14.png" width="40px" height="40px" /> 
-        <img class="col-xs-3 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" />
+        <img onclick="logout()" class="col-xs-3 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" />
     </div>
      <div class="row" style="margin-top: 10px;"><b><span id="benvenuto"></span></b></div>
 </div>
