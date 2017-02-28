@@ -104,9 +104,10 @@
                     <input type="text" id="farmacia" class="form-control input-sm" placeholder="Cerca farmacia" /> <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="submit" onclick="lanciaQui()">
                             <i class="glyphicon glyphicon-map-marker"></i>
-                            <button class="btn btn-info btn-lg" type="submit" onclick="lancia()">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
+                        </button>
+                        <button class="btn btn-info btn-lg" type="submit" onclick="lancia()">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
                     </span>
                 </div>
             </div>
