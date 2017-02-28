@@ -28,7 +28,7 @@
             <!-- INSERIRE IMMAGINE DOTTORE -->
             <div style="height: 230px">
                 <div style="float: left;">
-                    <img class="img-responsive" src="img/homedottore/pazienti.jpg" style="width: 200px; margin-left: 10px" />
+                    <img class="img-responsive" src="${dottore.src}" style="width: 200px; margin-left: 10px" />
                 </div>
                 <div style="float: left; margin-left: 10px">
                     <!-- INSERIRE NOME DOTTORE -->

@@ -10,11 +10,41 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="stile/stile.css">
 <title>Diario</title>
-<style type="text/css">
+<script type="text/javascript">
+
+function indietro()
+{
+	var http = new XMLHttpRequest();
 	
+	http.onreadystatechange = function()
+	{
+		alert("ciao");
+		if(http.readyState==4 && http.status==200)
+		{
+			
+			location.reload();
+		}
+	}
+	http.open("POST", "ServletIndietro", true);
+	http.send();
+}
 
-
-</style>
+function avanti()
+{
+	var http = new XMLHttpRequest();
+	
+	http.onreadystatechange = function()
+	{
+		alert("ciao");
+		if(http.readyState==4 && http.status==200)
+		{
+			location.reload();
+		}
+	}
+	http.open("POST", "ServletAvanti", true);
+	http.send();
+}
+</script>
 </head>
 <body>
 <%
@@ -40,13 +70,13 @@ else
         			<p>Mattina</p><input id="mattina" type="text" value="<%= valori.get(count).getMattina() %>" style="margin-bottom:6px;">
         			<p>Pomeriggio</p><input id="pom" type="text" value="<%= valori.get(count).getPomeriggio() %>" style="margin-bottom:6px;"/>
         			<p>Sera</p><input id="sera" type="text" value="<%= valori.get(count).getSera() %>" style="margin-bottom:6px;"/>
-        			<p><button type="button" class="btn btn-primary" onclick="indietro()" style="margin-top:10px;">Indietro</button> <%= valori.get(0).getData() %></p>
+        			<p><button type="button" class="btn btn-primary" onclick="indietro()" style="margin-top:10px;">Indietro</button> <%= valori.get(count).getData() %></p>
         		</div>
         		<div class="col-xs-3 col-xs-offset-3" style="margin-top:55px;">
         			<p>Mattina</p><input id="mattina" type="text" value="<%= valori.get(count+1).getMattina() %>" style="margin-bottom:6px;">
         			<p>Pomeriggio</p><input id="pom" type="text" value="<%= valori.get(count+1).getPomeriggio() %>" style="margin-bottom:6px;"/>
         			<p>Sera</p><input id="sera" type="text" value="<%= valori.get(count+1).getSera() %>" style="margin-bottom:6px;"/>
-        			<p><button type="button" class="btn btn-primary" onclick="avanti()" style="margin-top:10px;">Avanti</button> <%= valori.get(1).getData() %> <button type="button" class="btn btn-primary" style="margin-top:5px;">Modifica</button></p>
+        			<p><button type="button" class="btn btn-primary" onclick="avanti()" style="margin-top:10px;">Avanti</button> <%= valori.get(count).getData() %> <button type="button" class="btn btn-primary" style="margin-top:5px;">Modifica</button></p>
         			<p></p>
         		</div>
         	</div>

@@ -22,7 +22,7 @@
 </div>
 <div class="col-md-2 col-md-offset-2" style="margin-top: 50px; font-size: 18px;">
     <div class="row">
-        <span class="col-xs-2"></span> <img class="col-xs-4 img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> <img onclick="javascript:logout()" class="col-xs-4 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" /> <span class="col-xs-2"></span>
+        <span class="col-xs-2"></span> <img class="col-xs-4 img-responsive" onclick="window.open('profiloDottore.jsp','_self');" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> <img onclick="javascript:logout()" class="col-xs-4 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" /> <span class="col-xs-2"></span>
     </div>
     <div class="row">
         <b><span class="col-xs-12" id="benvenuto" style="margin-top: 20px;"></span></b>

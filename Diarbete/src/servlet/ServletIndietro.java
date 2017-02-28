@@ -23,12 +23,14 @@ public class ServletIndietro extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		int count = (int) request.getSession().getAttribute("count");
+		System.out.println(count);
 		if (count==0)
 		{
 			
 		}
 		else
 			count-=2;
+		request.getSession().setAttribute("count", count);
 	}
 
 	/**

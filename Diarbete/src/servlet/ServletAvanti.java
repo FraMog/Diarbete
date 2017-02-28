@@ -36,6 +36,8 @@ public class ServletAvanti extends HttpServlet {
 		}
 		else
 			count+=2;
+		System.out.println(count);
+		 request.getSession().setAttribute("count", count);
 	}
 
 	/**

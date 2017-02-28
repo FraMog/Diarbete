@@ -21,10 +21,9 @@
     <img src="img/logo.png">
 </div>
 <div class="col-md-3 col-md-offset-1" style="margin-top: 50px; font-size: 20px; ">
-    <div class="row">
-        <img class="col-xs-3 img-responsive" src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png" width="40px" height="40px" />   
-        <img class="col-xs-3 img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> 
-        <img class="col-xs-3 img-responsive" src="http://www.freeiconspng.com/uploads/message-icon-png-14.png" width="40px" height="40px" /> 
+    <div class="row">   
+        <img class="col-xs-3 img-responsive" onclick="window.open('homePaziente.jsp','_self')" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> 
+        <img class="col-xs-3 img-responsive" onclick="window.open('diario.jsp','_self')" src="https://cdn3.iconfinder.com/data/icons/solid-locations-icon-set/64/LIBRARY_2-64.png" width="40px" height="40px" /> 
         <img onclick="logout()" class="col-xs-3 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" />
     </div>
      <div class="row" style="margin-top: 10px;"><b><span id="benvenuto"></span></b></div>
