@@ -9,6 +9,8 @@
  dove myItemMenuNavigazionale è uno degli item presenti in lista
  --%>
 
+<% if (session.getAttribute("dottore") != null) { %>
+
 <nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -39,4 +41,4 @@
 		</div>
 	</nav>
 	
-	
+	<% } %>
