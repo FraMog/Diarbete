@@ -22,6 +22,7 @@
 </div>
 <div class="col-md-3 col-md-offset-1" style="margin-top: 50px; font-size: 20px; ">
     <div class="row">   
+    <span class="col-xs-3"></span>
         <img class="col-xs-3 img-responsive" onclick="window.open('homePaziente.jsp','_self')" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" width="40px" height="40px" /> 
         <img class="col-xs-3 img-responsive" onclick="window.open('diario.jsp','_self')" src="https://cdn3.iconfinder.com/data/icons/solid-locations-icon-set/64/LIBRARY_2-64.png" width="40px" height="40px" /> 
         <img onclick="logout()" class="col-xs-3 img-responsive" src="http://wfarm1.dataknet.com/static/resources/icons/set112/f4f80fc6.png" width="40px" height="40px" />
