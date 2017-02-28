@@ -8,7 +8,6 @@
  </script>
  dove myItemMenuNavigazionale è uno degli item presenti in lista
  --%>
-
 <nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -38,5 +37,3 @@
 			</ul>
 		</div>
 	</nav>
-	
-	
